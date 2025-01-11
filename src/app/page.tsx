@@ -1,101 +1,121 @@
-import Image from "next/image";
+import React from 'react';
+import Image from 'next/image';
+import { Carousel } from '@/components/Carousel/Carousel';
+import ContentSection from './_components/content/ContentSection';
+import LinkButton from './_components/button/LinkButton';
+import HeroSection from './_components/hero/HeroSection';
+import LeftToRightContent from './_components/content/LeftToRightContent';
 
-export default function Home() {
+const Home: React.FC = () => {
+  const groupImages = [
+    "/home/plextech-group-1.webp",
+    "/home/plextech-group-2.webp",
+    "/home/plextech-group-3.webp",
+    "/home/plextech-group-4.webp",
+    "/home/plextech-group-5.webp",
+    "/home/plextech-group-6.webp",
+  ];
+
+  const flyerImages = [
+    "/home/flyer-front-fa24.webp",
+    "/home/flyer-back-fa24.webp",
+  ];
+
+  const stats = [
+    { value: 8, label: 'Semesters of Experience' },
+    { value: 29, label: 'Projects Completed' },
+    { value: 42, label: 'Active Members' },
+  ];
+
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              src/app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+    <main>
+      {/* Hero Section */}
+      <HeroSection backgroundImage='/home/landing-bg.webp' center={true}>
+        <LeftToRightContent
+          leftChildren={
+            <div className="text-center lg:text-left max-w-sm mt-28 lg:mt-0">
+              <div className="font-mono text-4xl font-bold drop-shadow-2xl">
+                <p>
+                  &gt; git init your
+                </p>
+                <p
+                  className="whitespace-nowrap overflow-hidden border-r-2 border-transparent animate-typing"
+                >
+                  journey into tech!
+                </p>
+              </div>
+              <p className="text-xl lg:text-2xl mt-4 font-bold">
+                PlexTech, UC Berkeley's Premier Software Engineering Student Organization
+              </p>
+              <div className="flex mt-4 space-x-4 justify-center lg:justify-start">
+                <LinkButton href="/join" isAlternate={false} innerText="Apply!" />
+                <LinkButton href="/about" isAlternate={true} innerText="Learn More!" />
+              </div>
+            </div>
+          }
+          rightChildren={
             <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              src="/home/dashboard-img.webp"
+              alt="Dashboard"
+              className="w-full max-w-md h-auto mx-auto"
+              width={400}
+              height={400}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+          }
+        />
+      </HeroSection>
+
+      {/* We Are PlexTech Section */}
+      <ContentSection title="We Are PlexTech" isAlternate={false}>
+        <LeftToRightContent
+          leftChildren={
+            <Carousel images={groupImages} />
+          }
+          rightChildren={
+            <div className="mb-4 text-lg">
+              <h3 className="mb-4">
+                We are a tight-knit community of students of various backgrounds who seek to provide each other with
+                opportunities to find their foothold in the software engineering industry.
+              </h3>
+              <h3>
+                Our mission is to guide our members, who enter as students in our new member education program,
+                through the process of being developers, project managers, and eventually leaders in the tech space.
+              </h3>
+            </div>
+          }
+        />
+        {/* Statistics Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full p-6">
+          {stats.map((stat, index) => (
+            <div key={index} className="text-center font-sans font-bold">
+              <div className="flex justify-center">
+                <div className="text-orange-600 text-5xl md:text-8xl">
+                  {stat.value}
+                </div>
+              </div>
+              <div className="text-2xl md:text-3xl m-4">
+                {stat.label}
+              </div>
+            </div>
+          ))}
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+        <LinkButton href="/about" isAlternate={false} innerText="About Us" />
+      </ContentSection>
+
+      {/* Recruitment Section */}
+      <ContentSection
+        title="Fall 2024 Recruitment"
+        summary="We're always looking to add new members to our growing community. We welcome all Berkeley students to apply and join our community, regardless of major or technical experience."
+        isAlternate={true}
+        bgClassName='bg-gradient-to-br from-[#FF833D] via-[#F06751] via-[#E04867] via-[#B9009B] to-[#A736CE]'
+      >
+        <Carousel images={flyerImages} />
+        <div className='pt-8'>
+          <LinkButton href="/join" isAlternate={false} innerText="Join Us" />
+        </div>
+      </ContentSection>
+    </main>
   );
-}
+};
+
+export default Home;
