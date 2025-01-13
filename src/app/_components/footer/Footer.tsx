@@ -1,7 +1,8 @@
 import React from 'react';
 import Link from 'next/link';
+import Image from 'next/legacy/image';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
-import { menuItems } from '@/app/_utils/menuitems';
+import { menuItems } from '@/app/_utils/menuItems';
 
 const Footer: React.FC = () => {
   return (
@@ -9,10 +10,24 @@ const Footer: React.FC = () => {
       <div className="container mx-auto flex flex-wrap justify-evenly">
         {/* Description Section */}
         <div className="w-full md:w-1/3 mb-6 md:mb-0">
-          <p className="text-white text-lg mb-4">
+          <p className="text-white text-lg">
             We are a student group acting independent of the University of California. We take full responsibility for
             our organization and this web site.
           </p>
+          <Link
+            href="https://www.ocf.berkeley.edu"
+            passHref
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Image
+              src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg"
+              alt="Hosted by the OCF"
+              width={75}
+              height={50}
+              className="border-0"
+            />
+          </Link>
           <hr className="border-white mb-4" />
           <p className="text-white">Copyright &copy; {new Date().getFullYear()} All rights reserved</p>
         </div>

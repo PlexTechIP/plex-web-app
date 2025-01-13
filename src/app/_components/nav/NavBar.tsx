@@ -1,9 +1,9 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import Link from 'next/link';
-import { menuItems } from '@/app/_utils/menuitems';
+import { menuItems } from '@/app/_utils/menuItems';
 
 const NavBar: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);

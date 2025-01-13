@@ -1,10 +1,10 @@
 import React from 'react';
-import Image from 'next/image';
-import { Carousel } from '@/components/Carousel/Carousel';
+import Image from "next/legacy/image";
 import ContentSection from './_components/content/ContentSection';
 import LinkButton from './_components/button/LinkButton';
 import HeroSection from './_components/hero/HeroSection';
 import LeftToRightContent from './_components/content/LeftToRightContent';
+import { Carousel } from '@/components/Carousel/Carousel';
 
 const Home: React.FC = () => {
   const groupImages = [
@@ -45,7 +45,7 @@ const Home: React.FC = () => {
                 </p>
               </div>
               <p className="text-xl lg:text-2xl mt-4 font-bold">
-                PlexTech, UC Berkeley's Premier Software Engineering Student Organization
+                PlexTech, UC Berkeley&#39;s Premier Software Engineering Student Organization
               </p>
               <div className="flex mt-4 space-x-4 justify-center lg:justify-start">
                 <LinkButton href="/join" isAlternate={false} innerText="Apply!" />

@@ -1,5 +1,5 @@
 import React from "react";
-import Image from "next/image";
+import Image from "next/legacy/image";
 import Link from "next/link";
 import { BiCoffee } from "react-icons/bi";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
@@ -30,7 +30,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                   {/* Profile Image */}
                   <div className="relative aspect-square rounded-full overflow-hidden mt-[20%] w-[57%]">
                     <Image
-                      src={member.imageUrl}
+                      src={member.imageUrl ? member.imageUrl : '/team/not-found.jpg'}
                       alt={`${member.firstName}`}
                       layout="fill"
                       objectFit="cover"
@@ -44,9 +44,9 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                     {member.firstName + " " + member.lastName}
                   </h5>
                   <h6 className="font-semibold text-xl text-gray-500">
-                    {member.position === "Exec" ? member.subposition : member.position}
+                    {member.position}
                   </h6>
-                  {member.position === "Alum" && (
+                  {member.position === "Alumni" && (
                     <p className="text-sm text-gray-600">
                       {member.currentCompany}
                     </p>
@@ -69,9 +69,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                     {member.position}
                   </h6>
                   <p className="text-left">
-                    {member.blurb.length > 250
-                      ? `${member.blurb.substring(0, 250)}...`
-                      : member.blurb}
+                    {member.blurb}
                   </p>
                 </div>
 

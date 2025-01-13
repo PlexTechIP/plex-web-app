@@ -1,5 +1,5 @@
 import HeroSection from '@/app/_components/hero/HeroSection';
-import Image from 'next/image';
+import Image from "next/legacy/image";
 import ContentSection from '@/app/_components/content/ContentSection';
 import LinkButton from '@/app/_components/button/LinkButton';
 import CardSection from '@/app/_components/content/CardSection';

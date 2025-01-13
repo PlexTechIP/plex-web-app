@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
         protocol: "https",
         hostname: "ca.slack-edge.com",
       },
+      {
+        protocol: "https",
+        hostname: "www.ocf.berkeley.edu",
+      },
     ],
   },
 };

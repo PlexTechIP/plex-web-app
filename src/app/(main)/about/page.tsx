@@ -1,6 +1,6 @@
-import Image from "next/image";
+import Image from "next/legacy/image";
 
-import { Carousel } from "@/components/Carousel/carousel";
+import { Carousel } from "@/components/Carousel/Carousel";
 import HeroSection from "@/app/_components/hero/HeroSection";
 import ContentSection from "@/app/_components/content/ContentSection";
 import LeftToRightContent from "@/app/_components/content/LeftToRightContent";
@@ -75,11 +75,11 @@ const About: React.FC = () => {
           </p>
         </>
       ),
-      rightContent: <Carousel images={mentorshipImages} autoPlay interval={5000} />,
+      rightContent: <Carousel images={mentorshipImages} />,
     },
     {
       title: "Chummings",
-      leftContent: <Carousel images={chummingsImages} autoPlay interval={5000} />,
+      leftContent: <Carousel images={chummingsImages} />,
       rightContent: (
         <>
           <h2 className="text-4xl font-extrabold mb-5">Chummings</h2>
@@ -100,7 +100,7 @@ const About: React.FC = () => {
           <h2 className="text-4xl font-extrabold mb-5">Learning with Friends</h2>
           <p className="text-xl">
             We encourage a pedagogy-focused environment by engaging new members in a semester-long
-            bootcamp that's focused on a particular area of their interest. We externalize this value by hosting
+            bootcamp that&#39;s focused on a particular area of their interest. We externalize this value by hosting
             external technical workshops which are open to absolutely anybody!
           </p>
         </>
@@ -109,10 +109,8 @@ const About: React.FC = () => {
         <Image
           src="/about/values/tenacious-learners.webp"
           alt="Learning with Friends"
-          className="mx-auto"
-          width={500}
-          height={500}
-          priority
+          width={490}
+          height={400}
         />
       ),
     },
@@ -122,10 +120,8 @@ const About: React.FC = () => {
         <Image
           src="/about/values/industry-innovators.webp"
           alt="Industry Innovators"
-          className="mx-auto"
-          width={500}
-          height={500}
-          priority
+          width={490}
+          height={400}
         />
       ),
       rightContent: (
@@ -155,10 +151,8 @@ const About: React.FC = () => {
         <Image
           src="/about/values/excellence-together.webp"
           alt="Excellence Together"
-          className="mx-auto"
-          width={500}
-          height={500}
-          priority
+          width={490}
+          height={400}
         />
       ),
     },
@@ -168,10 +162,8 @@ const About: React.FC = () => {
         <Image
           src="/about/values/pushing-limits.webp"
           alt="Pushing Limits"
-          className="mx-auto"
-          width={500}
-          height={500}
-          priority
+          width={490}
+          height={400}
         />
       ),
       rightContent: (
@@ -236,6 +228,20 @@ const About: React.FC = () => {
             styles="mb-36"
           />
         ))}
+      </ContentSection>
+
+      <ContentSection
+        title="Our Destinations"
+        summary="PlexTech equips our members with the software engineering skills and experiences to land in the top tech companies, from FAANG to high-growth unicorns. We also have an amazing alumni network helping our new members navigate the software engineering world and find their own internship opportunities."
+        isAlternate={false}
+        bgClassName="white"
+      >
+        <Image
+          src="/about/destinations.webp"
+          alt="Our Destinations"
+          width={4880}
+          height={1032}
+        />
       </ContentSection>
     </main>
   );
