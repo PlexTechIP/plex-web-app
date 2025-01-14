@@ -47,7 +47,7 @@ const NavBar: React.FC = () => {
             <div className="flex items-center">
               <Link href="/" passHref className="flex items-center">
                 <Image
-                  src="/plextech-logo.webp"
+                  src="plextech-logo.webp"
                   alt="PlexTech Logo"
                   width={50}
                   height={75}

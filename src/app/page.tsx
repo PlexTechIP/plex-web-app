@@ -55,7 +55,7 @@ const Home: React.FC = () => {
           }
           rightChildren={
             <Image
-              src="/home/dashboard-img.webp"
+              src="home/dashboard-img.webp"
               alt="Dashboard"
               className="w-full max-w-md h-auto mx-auto"
               width={375}

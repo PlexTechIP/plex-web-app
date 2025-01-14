@@ -84,7 +84,7 @@ const Roles: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-10">
-          <Image src="/roles/pipeline.webp" alt="Pipeline Outline" width={800} height={200} />
+          <Image src="roles/pipeline.webp" alt="Pipeline Outline" width={800} height={200} />
         </div>
       </ContentSection>
 
