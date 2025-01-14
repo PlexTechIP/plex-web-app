@@ -1,20 +1,22 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  distDir: "build",
   images: {
     remotePatterns: [
       {
-        protocol: "https",
-        hostname: "ca.slack-edge.com",
+        hostname: "localhost",
       },
       {
         protocol: "https",
         hostname: "www.ocf.berkeley.edu",
       },
     ],
+    unoptimized: true,
   },
-  output: "export"
+  output: "export",
+  assetPrefix: "./",
+  trailingSlash: false,
+  reactStrictMode: true,
 };
 
 export default nextConfig;

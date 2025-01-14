@@ -2,17 +2,16 @@
 
 import Image from "next/legacy/image";
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 
 interface CarouselProps {
   images: string[];
 }
 
-export const Carousel: React.FC<CarouselProps> = ({
-  images
-}) => {
+export const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [selectedIndex, setSelectedIndex] = useState(0);
+  const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -28,7 +27,23 @@ export const Carousel: React.FC<CarouselProps> = ({
 
   useEffect(() => {
     if (!emblaApi) return;
+
+    autoplayRef.current = setInterval(() => {
+      emblaApi.scrollNext();
+    }, 3000);
+
+    return () => {
+      if (autoplayRef.current) clearInterval(autoplayRef.current);
+    };
+  }, [emblaApi]);
+
+  useEffect(() => {
+    if (!emblaApi) return;
     emblaApi.on("select", onSelect);
+
+    return () => {
+      emblaApi.off("select", onSelect);
+    };
   }, [emblaApi, onSelect]);
 
   return (
@@ -41,7 +56,12 @@ export const Carousel: React.FC<CarouselProps> = ({
               className="flex-[0_0_100%] relative"
               style={{ aspectRatio: "16/9" }}
             >
-              <Image src={src} alt={`Carousel Image ${index}`} layout="fill" objectFit="contain" />
+              <Image
+                src={src}
+                alt={`Carousel Image ${index}`}
+                layout="fill"
+                objectFit="contain"
+              />
             </div>
           ))}
         </div>
@@ -50,9 +70,8 @@ export const Carousel: React.FC<CarouselProps> = ({
         {images.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full mx-1 ${
-              index === selectedIndex ? "bg-orange-500" : "bg-gray-300"
-            }`}
+            className={`w-3 h-3 rounded-full mx-1 ${index === selectedIndex ? "bg-orange-500" : "bg-gray-300"
+              }`}
             onClick={() => scrollTo(index)}
           />
         ))}

@@ -1,21 +1,9 @@
-import { DM_Sans, DM_Mono } from "next/font/google";
+import { Metadata } from "next";
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 import "./globals.css";
 import NavBar from "./_components/nav/NavBar";
 import Footer from "./_components/footer/Footer";
-import { Metadata } from "next";
-
-const dmSans = DM_Sans({
-  variable: "--font-dm-sans",
-  subsets: ["latin"],
-});
-
-const dmMono = DM_Mono({
-  variable: "--font-dm-mono",
-  subsets: ["latin"],
-  weight: "500"
-});
 
 export const metadata: Metadata = {
   title: "Home | PlexTech - Berkeley",
@@ -31,7 +19,7 @@ export default function RootLayout({
     <html lang="en">
       <GoogleAnalytics gaId="G-1ZRE4ZD52Y" />
       <body
-        className={`${dmSans.variable} ${dmMono.variable} antialiased`}
+        className="antialiased"
       >
         <NavBar />
         {children}

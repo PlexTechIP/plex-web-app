@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import ContentSection from './_components/content/ContentSection';
 import LinkButton from './_components/button/LinkButton';
 import HeroSection from './_components/hero/HeroSection';
@@ -8,17 +8,17 @@ import { Carousel } from '@/components/Carousel/Carousel';
 
 const Home: React.FC = () => {
   const groupImages = [
-    "/home/plextech-group-1.webp",
-    "/home/plextech-group-2.webp",
-    "/home/plextech-group-3.webp",
-    "/home/plextech-group-4.webp",
-    "/home/plextech-group-5.webp",
-    "/home/plextech-group-6.webp",
+    "home/plextech-group-1.webp",
+    "home/plextech-group-2.webp",
+    "home/plextech-group-3.webp",
+    "home/plextech-group-4.webp",
+    "home/plextech-group-5.webp",
+    "home/plextech-group-6.webp",
   ];
 
   const flyerImages = [
-    "/home/flyer-front-fa24.webp",
-    "/home/flyer-back-fa24.webp",
+    "home/flyer-front-fa24.webp",
+    "home/flyer-back-fa24.webp",
   ];
 
   const stats = [
@@ -30,7 +30,7 @@ const Home: React.FC = () => {
   return (
     <main>
       {/* Hero Section */}
-      <HeroSection backgroundImage='/home/landing-bg.webp' center={true}>
+      <HeroSection backgroundImage='home/landing-bg.webp' center={true}>
         <LeftToRightContent
           leftChildren={
             <div className="text-center lg:text-left max-w-sm mt-28 lg:mt-0">
@@ -55,11 +55,11 @@ const Home: React.FC = () => {
           }
           rightChildren={
             <Image
-              src="/home/dashboard-img.webp"
+              src="home/dashboard-img.webp"
               alt="Dashboard"
               className="w-full max-w-md h-auto mx-auto"
-              width={400}
-              height={400}
+              width={375}
+              height={250}
             />
           }
         />

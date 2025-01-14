@@ -15,7 +15,7 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   isAlternate,
   bgClassName,
 }) => {
-  const bgImage = !bgClassName ? (isAlternate ? "/shapes-bg-alt.webp" : "./shapes-bg.webp") : "";
+  const bgImage = !bgClassName ? (isAlternate ? "shapes-bg-alt.webp" : "shapes-bg.webp") : "";
   const appliedBgClass = bgClassName || "";
   const appliedBgImageConfig = !bgClassName && bgImage
     ? `bg-contain bg-center`

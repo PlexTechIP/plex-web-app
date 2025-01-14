@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/legacy/image';
+import Image from 'next/image';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { menuItems } from '@/app/_utils/menuItems';
 
@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           <ul className="space-y-2">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <Link href={item.href} className="hover:underline">
+                <Link href={item.href} passHref className="hover:underline">
                   {item.name}
                 </Link>
               </li>

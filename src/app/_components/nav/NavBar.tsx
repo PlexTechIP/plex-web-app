@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from "next/legacy/image";
+import Image from "next/image";
 import Link from 'next/link';
 import { menuItems } from '@/app/_utils/menuItems';
 
@@ -45,9 +45,9 @@ const NavBar: React.FC = () => {
           <div className={`flex items-center justify-between py-4`}>
             {/* Logo Section */}
             <div className="flex items-center">
-              <Link href="/" className="flex items-center">
+              <Link href="/" passHref className="flex items-center">
                 <Image
-                  src="/plextech-logo.webp"
+                  src="plextech-logo.webp"
                   alt="PlexTech Logo"
                   width={50}
                   height={75}
@@ -61,6 +61,7 @@ const NavBar: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
+                  passHref
                   className="hover:text-orange-400"
                 >
                   {item.name}
@@ -96,6 +97,7 @@ const NavBar: React.FC = () => {
                 <Link
                   key={item.name}
                   href={item.href}
+                  passHref
                   className="hover:text-orange-400"
                   onClick={closeSidebar}
                 >

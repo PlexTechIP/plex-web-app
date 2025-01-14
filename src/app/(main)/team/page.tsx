@@ -1,9 +1,15 @@
+'use client'
+
 import HeroSection from "@/app/_components/hero/HeroSection";
 import ContentSection from "@/app/_components/content/ContentSection";
 import TeamCardSection from "@/app/_components/content/TeamCardSection";
 import { Member } from "@/app/_types/Member";
+import { fetchMembers } from "@/app/_libs/fetchMembers";
+import { useEffect, useState } from "react";
 
 const Team: React.FC = () => {
+  const [members, setMembers] = useState<Member[]>([]);
+
   const teamSections = [
     {
       title: "Executive Board",
@@ -43,39 +49,18 @@ const Team: React.FC = () => {
     },
   ];
 
-  const members: Member[] = [
-    {
-      firstName: "Rohan",
-      lastName: "Kakulawaram",
-      imageUrl: "https://ca.slack-edge.com/T011VMRJU3W-U02EQQZJJ9L-e837f524fefc-512",
-      position: "President",
-      blurb: "Hey! I am a 4th year studying CS. My main interests are in Software Engineering and ML. In my free time, I love watching baseball, hiking, and playing chess",
-      linkedin: "https://linkedin.com/in/rohan-kakulawaram",
-      instagram: "https://instagram.com/rohan_rk2003/?hl=en",
-      calendly: "https://calendly.com/rohanrk2003",
-    },
-    {
-      firstName: "Rohan",
-      lastName: "Kakulawaram",
-      imageUrl: "https://ca.slack-edge.com/T011VMRJU3W-U04MW1XRP5Z-0a2b10fa8f99-512",
-      position: "Senior Advisor",
-      blurb: "Hey! I am a 4th year studying CS. My main interests are in Software Engineering and ML. In my free time, I love watching baseball, hiking, and playing chess",
-      linkedin: "https://linkedin.com/in/rohan-kakulawaram",
-      instagram: "https://instagram.com/rohan_rk2003/?hl=en",
-      calendly: "https://calendly.com/rohanrk2003",
-    },
-    {
-      firstName: "Rohan",
-      lastName: "Kakulawaram",
-      imageUrl: "https://ca.slack-edge.com/T011VMRJU3W-U05SDDAAYAU-7cf87b48ed19-512",
-      position: "Alumni",
-      blurb: "Hey! I am a 4th year studying CS. My main interests are in Software Engineering and ML. In my free time, I love watching baseball, hiking, and playing chess",
-      linkedin: "https://linkedin.com/in/rohan-kakulawaram",
-      instagram: "https://instagram.com/rohan_rk2003/?hl=en",
-      calendly: "https://calendly.com/rohanrk2003",
-      currentCompany: "DataDog"
-    },
-  ];
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const data = await fetchMembers();
+        setMembers(data);
+      } catch (err) {
+        console.log(err);
+      }
+    };
+
+    fetchData();
+  }, []);
 
   return (
     <main>

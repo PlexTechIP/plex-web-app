@@ -16,7 +16,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
 
   return (
     <div className="flex justify-center">
-      <Link href={href}>
+      <Link href={href} passHref>
         <button
           type="button"
           className={`btn btn-secondary px-6 py-2 text-xl rounded-xl hover:bg-orange-600 hover:text-white ${styles}`}
