@@ -65,7 +65,7 @@ const Roles: React.FC = () => {
 
   return (
     <main>
-      <HeroSection backgroundImage='/roles/roles-bg.webp' title='Roles in PlexTech' subtitle='Find your PlexTech fit!' center={false}/>
+      <HeroSection backgroundImage='roles/roles-bg.webp' title='Roles in PlexTech' subtitle='Find your PlexTech fit!' center={false}/>
 
       {/* PIPELINE SECTION */}
       <ContentSection

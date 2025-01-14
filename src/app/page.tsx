@@ -30,7 +30,7 @@ const Home: React.FC = () => {
   return (
     <main>
       {/* Hero Section */}
-      <HeroSection backgroundImage='/home/landing-bg.webp' center={true}>
+      <HeroSection backgroundImage='home/landing-bg.webp' center={true}>
         <LeftToRightContent
           leftChildren={
             <div className="text-center lg:text-left max-w-sm mt-28 lg:mt-0">
