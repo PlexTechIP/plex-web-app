@@ -25,7 +25,7 @@ const Footer: React.FC = () => {
               alt="Hosted by the OCF"
               width={75}
               height={50}
-              className="border-0"
+              className="border-0 p-2"
             />
           </Link>
           <hr className="border-white mb-4" />
