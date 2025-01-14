@@ -7,31 +7,31 @@ import LeftToRightContent from "@/app/_components/content/LeftToRightContent";
 
 const About: React.FC = () => {
   const clubSocialsImages: string[] = [
-    "about/club-social-1.webp",
-    "about/club-social-2.webp",
-    "about/club-social-3.webp",
-    "about/club-social-4.webp",
+    "/about/club-social-1.webp",
+    "/about/club-social-2.webp",
+    "/about/club-social-3.webp",
+    "/about/club-social-4.webp",
   ];
 
   const teamSocialsImages: string[] = [
-    "about/team-social-1.webp",
-    "about/team-social-2.webp",
-    "about/team-social-3.webp",
-    "about/team-social-4.webp",
+    "/about/team-social-1.webp",
+    "/about/team-social-2.webp",
+    "/about/team-social-3.webp",
+    "/about/team-social-4.webp",
   ];
 
   const mentorshipImages: string[] = [
-    "about/mentorship-1.webp",
-    "about/mentorship-2.webp",
-    "about/mentorship-3.webp",
-    "about/mentorship-4.webp",
+    "/about/mentorship-1.webp",
+    "/about/mentorship-2.webp",
+    "/about/mentorship-3.webp",
+    "/about/mentorship-4.webp",
   ];
 
   const chummingsImages: string[] = [
-    "about/chummings-1.webp",
-    "about/chummings-2.webp",
-    "about/chummings-3.webp",
-    "about/chummings-4.webp",
+    "/about/chummings-1.webp",
+    "/about/chummings-2.webp",
+    "/about/chummings-3.webp",
+    "/about/chummings-4.webp",
   ];
 
   const plexfamSections = [
@@ -107,7 +107,7 @@ const About: React.FC = () => {
       ),
       rightContent: (
         <Image
-          src="about/values/tenacious-learners.webp"
+          src="/about/values/tenacious-learners.webp"
           alt="Learning with Friends"
           width={490}
           height={400}
@@ -118,7 +118,7 @@ const About: React.FC = () => {
       title: "Industry Innovators",
       leftContent: (
         <Image
-          src="about/values/industry-innovators.webp"
+          src="/about/values/industry-innovators.webp"
           alt="Industry Innovators"
           width={490}
           height={400}
@@ -149,7 +149,7 @@ const About: React.FC = () => {
       ),
       rightContent: (
         <Image
-          src="about/values/excellence-together.webp"
+          src="/about/values/excellence-together.webp"
           alt="Excellence Together"
           width={490}
           height={400}
@@ -160,7 +160,7 @@ const About: React.FC = () => {
       title: "Pushing Limits",
       leftContent: (
         <Image
-          src="about/values/pushing-limits.webp"
+          src="/about/values/pushing-limits.webp"
           alt="Pushing Limits"
           width={490}
           height={400}
@@ -181,7 +181,7 @@ const About: React.FC = () => {
 
   return (
     <main>
-      <HeroSection backgroundImage="about/about-us-bg.webp" title="About Us" subtitle="Who We Are and What We Do" center={false} />
+      <HeroSection backgroundImage="/about/about-us-bg.webp" title="About Us" subtitle="Who We Are and What We Do" center={false} />
 
       {/* Mission Section */}
       <ContentSection title="Our Mission" isAlternate={true}>
@@ -195,7 +195,7 @@ const About: React.FC = () => {
           }
           rightChildren={
             <Image
-              src="about/mission.webp"
+              src="/about/mission.webp"
               alt="Our Mission"
               className="mx-auto"
               width={500}
@@ -237,7 +237,7 @@ const About: React.FC = () => {
         bgClassName="white"
       >
         <Image
-          src="about/destinations.webp"
+          src="/about/destinations.webp"
           alt="Our Destinations"
           width={4880}
           height={1032}

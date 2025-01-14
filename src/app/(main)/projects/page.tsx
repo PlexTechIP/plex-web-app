@@ -10,88 +10,88 @@ import TextAreaField from "@/components/ContactForm/TextAreaField";
 const Projects: React.FC = () => {
   const ourServices = [
     {
-      image: "projects/web-development.webp",
+      image: "/projects/web-development.webp",
       title: "Full Stack Web Development",
     },
     {
-      image: "projects/machine-learning.webp",
+      image: "/projects/machine-learning.webp",
       title: "Machine Learning + Computer Vision",
     },
     {
-      image: "projects/data-visualization.webp",
+      image: "/projects/data-visualization.webp",
       title: "Data Engineering + Visualization",
     },
   ]
 
   const portfolio = [
     {
-      image: "projects/portfolio/zendesk.webp",
+      image: "/projects/portfolio/zendesk.webp",
       title: "Backend + Frontend",
       description:
         "Developed a microservice with a frontend to configure SLA policies and a backend to facilitate requests and send notifications; unit tests to validate interactions between the two components. Notifies 1,000,000+ SLA requests per day.",
     },
     {
-      image: "projects/portfolio/atlassian.webp",
+      image: "/projects/portfolio/atlassian.webp",
       title: "NLP + Frontend",
       description:
         "Developed a fully trained NLP model that has been deployed / hosted on AWS EC2; currently, groups 1000+ issues a day on Jira to save time for end users.",
     },
     {
-      image: "projects/portfolio/flexcar.webp",
+      image: "/projects/portfolio/flexcar.webp",
       title: "Backend + Mobile Dev",
       description:
         "Developed a task management mobile app that facilitates task assignment and tracking, incorporates user authentication, including data models, RESTful APIs, and front-end components, all managed by a full-stack team.",
     },
     {
-      image: "projects/portfolio/prove.webp",
+      image: "/projects/portfolio/prove.webp",
       title: "Backend + Data Eng + Frontend",
       description:
         "Built a software that detected anomalies in user entry data to help Prove find false identities and inconsistencies in customer endpoint usage faster.",
     },
     {
-      image: "projects/portfolio/faradayfuture.webp",
+      image: "/projects/portfolio/faradayfuture.webp",
       title: "CV + ML",
       description:
         "Developed a driver monitoring system for FF's vehicles to detect symptoms of drowsiness using computer vision and neural networks, increasing safety and responsibility on the road.",
     },
     {
-      image: "projects/portfolio/attain.webp",
+      image: "/projects/portfolio/attain.webp",
       title: "Backend + Frontend",
       description:
         "Worked on APIs to modify the database for item lookup, cart, and order functionality for customers. The team created a web app for Attain to input new products and filter customer orders.",
     },
     {
-      image: "projects/portfolio/tailorbird.webp",
+      image: "/projects/portfolio/tailorbird.webp",
       title: "Mobile Dev",
       description:
         "Built a cross-platform mobile application which digitizes contractors' sitewalks using a fast and intuitive interface while automatically saving updated property information.",
     },
     {
-      image: "projects/portfolio/musematch.webp",
+      image: "/projects/portfolio/musematch.webp",
       title: "Mobile Dev + Data Eng",
       description:
         "Engineered a social-networking mobile app to build personal connections based on similar music taste identified through the Spotify web API, enabling original music recommendations.",
     },
     {
-      image: "projects/portfolio/thryft.webp",
+      image: "/projects/portfolio/thryft.webp",
       title: "Backend + Frontend",
       description:
         "Worked on rolling out several features such as revenue charts, custom navbars, and email lists for a platform for Instagram sellers to easily generate custom websites.",
     },
     {
-      image: "projects/portfolio/scholarhub.webp",
+      image: "/projects/portfolio/scholarhub.webp",
       title: "Backend + ML",
       description:
         "Implemented a machine learning algorithm to measure student learning styles and created the backend for a groups feature to support online student success.",
     },
     {
-      image: "projects/portfolio/centrl.webp",
+      image: "/projects/portfolio/centrl.webp",
       title: "Frontend + Backend",
       description:
         "Created a full-stack service that helped CENTRL visualize and organize its customer data in order to assist them when identifying problems.",
     },
     {
-      image: "projects/portfolio/perimeter.webp",
+      image: "/projects/portfolio/perimeter.webp",
       title: "Frontend + Backend",
       description:
         "A full-stack application where customers (public safety agencies) can view relevant usage data and analytics from incidents/exercises in an intuitive interface.",
@@ -116,7 +116,7 @@ const Projects: React.FC = () => {
   return (
     <main>
       <HeroSection
-        backgroundImage="projects/projects-bg.webp"
+        backgroundImage="/projects/projects-bg.webp"
         title="Industry Projects"
         subtitle="Find your footing in the software industry"
         center={false}

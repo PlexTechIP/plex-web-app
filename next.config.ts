@@ -14,8 +14,6 @@ const nextConfig: NextConfig = {
     unoptimized: true,
   },
   output: "export",
-  assetPrefix: "./",
-  trailingSlash: false,
   reactStrictMode: true,
 };
 
