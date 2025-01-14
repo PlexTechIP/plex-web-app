@@ -76,7 +76,7 @@ const Join: React.FC = () => {
       time: "11:59 PM",
       description:
         "Once you've learned about PlexTech, submit your application here! Our application only consists of three short answer questions and a resume drop. Note that applications are due by midnight, so make sure you don't submit yours late!",
-      links: [{ text: "Apply Here", href: "/apply/" }],
+      links: [{ text: "Apply Here", href: "/apply" }],
     },
     {
       date: "9/7-9/8",

@@ -15,7 +15,6 @@ const nextConfig: NextConfig = {
   },
   output: "export",
   assetPrefix: "./",
-  basePath: "/home",
   reactStrictMode: true,
 };
 
