@@ -48,8 +48,8 @@ const Home: React.FC = () => {
                 PlexTech, UC Berkeley&#39;s Premier Software Engineering Student Organization
               </p>
               <div className="flex mt-4 space-x-4 justify-center lg:justify-start">
-                <LinkButton href="/join" isAlternate={false} innerText="Apply!" />
-                <LinkButton href="/about" isAlternate={true} innerText="Learn More!" />
+                <LinkButton href="/join/" isAlternate={false} innerText="Apply!" />
+                <LinkButton href="/about/" isAlternate={true} innerText="Learn More!" />
               </div>
             </div>
           }
