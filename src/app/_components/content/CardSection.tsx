@@ -1,5 +1,5 @@
+import ExportedImage from "next-image-export-optimizer";
 import React from "react";
-import Image from "next/image";
 
 interface CardSectionProps {
   cards: { title: string; image: string; description?: string }[];
@@ -15,7 +15,7 @@ const CardSection: React.FC<CardSectionProps> = ({ cards }) => {
         >
           <div className="p-2">
             <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
-              <Image
+              <ExportedImage
                 src={card.image}
                 alt={card.title}
                 layout="fill"

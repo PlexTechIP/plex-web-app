@@ -1,5 +1,5 @@
 import HeroSection from '@/app/_components/hero/HeroSection';
-import Image from "next/image";
+import ExportedImage from 'next-image-export-optimizer';
 import ContentSection from '@/app/_components/content/ContentSection';
 import LinkButton from '@/app/_components/button/LinkButton';
 import CardSection from '@/app/_components/content/CardSection';
@@ -76,7 +76,7 @@ const Roles: React.FC = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {pipelineRoles.map((role, index) => (
             <div key={index} className="flex flex-col items-center text-center">
-              <Image src={role.image} alt={role.alt} width={150} height={150} />
+              <ExportedImage src={role.image} alt={role.alt} width={150} height={150} />
               <h4 className="mt-4 font-bold text-lg">{role.title}</h4>
               <p className="mt-2 text-gray-700">{role.content}</p>
             </div>
@@ -84,7 +84,7 @@ const Roles: React.FC = () => {
         </div>
 
         <div className="flex justify-center mt-10">
-          <Image src="roles/pipeline.webp" alt="Pipeline Outline" width={800} height={200} />
+          <ExportedImage src="roles/pipeline.webp" alt="Pipeline Outline" width={800} height={200} />
         </div>
       </ContentSection>
 

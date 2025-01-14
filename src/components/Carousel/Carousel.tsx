@@ -1,6 +1,6 @@
 'use client'
 
-import Image from "next/legacy/image";
+import ExportedImage from "next-image-export-optimizer";
 import useEmblaCarousel from "embla-carousel-react";
 import { useCallback, useEffect, useRef, useState } from "react";
 
@@ -56,7 +56,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
               className="flex-[0_0_100%] relative"
               style={{ aspectRatio: "16/9" }}
             >
-              <Image
+              <ExportedImage
                 src={src}
                 alt={`Carousel Image ${index}`}
                 layout="fill"

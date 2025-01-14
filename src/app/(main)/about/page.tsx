@@ -1,4 +1,4 @@
-import Image from "next/image";
+import ExportedImage from "next-image-export-optimizer";
 
 import { Carousel } from "@/components/Carousel/Carousel";
 import HeroSection from "@/app/_components/hero/HeroSection";
@@ -106,7 +106,7 @@ const About: React.FC = () => {
         </>
       ),
       rightContent: (
-        <Image
+        <ExportedImage
           src="about/values/tenacious-learners.webp"
           alt="Learning with Friends"
           width={490}
@@ -117,7 +117,7 @@ const About: React.FC = () => {
     {
       title: "Industry Innovators",
       leftContent: (
-        <Image
+        <ExportedImage
           src="about/values/industry-innovators.webp"
           alt="Industry Innovators"
           width={490}
@@ -148,7 +148,7 @@ const About: React.FC = () => {
         </>
       ),
       rightContent: (
-        <Image
+        <ExportedImage
           src="about/values/excellence-together.webp"
           alt="Excellence Together"
           width={490}
@@ -159,7 +159,7 @@ const About: React.FC = () => {
     {
       title: "Pushing Limits",
       leftContent: (
-        <Image
+        <ExportedImage
           src="about/values/pushing-limits.webp"
           alt="Pushing Limits"
           width={490}
@@ -194,7 +194,7 @@ const About: React.FC = () => {
             </h3>
           }
           rightChildren={
-            <Image
+            <ExportedImage
               src="about/mission.webp"
               alt="Our Mission"
               className="mx-auto"
@@ -236,7 +236,7 @@ const About: React.FC = () => {
         isAlternate={false}
         bgClassName="white"
       >
-        <Image
+        <ExportedImage
           src="about/destinations.webp"
           alt="Our Destinations"
           width={4880}

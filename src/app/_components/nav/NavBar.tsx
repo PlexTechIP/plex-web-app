@@ -1,7 +1,7 @@
 'use client';
 
 import React, { useState, useEffect } from 'react';
-import Image from "next/image";
+import ExportedImage from 'next-image-export-optimizer';
 import Link from 'next/link';
 import { menuItems } from '@/app/_utils/menuItems';
 
@@ -46,7 +46,7 @@ const NavBar: React.FC = () => {
             {/* Logo Section */}
             <div className="flex items-center">
               <Link href="/" passHref className="flex items-center">
-                <Image
+                <ExportedImage
                   src="plextech-logo.webp"
                   alt="PlexTech Logo"
                   width={50}

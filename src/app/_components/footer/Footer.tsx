@@ -1,6 +1,6 @@
 import React from 'react';
 import Link from 'next/link';
-import Image from 'next/image';
+import ExportedImage from 'next-image-export-optimizer';
 import { FaFacebookF, FaInstagram, FaLinkedinIn } from 'react-icons/fa';
 import { menuItems } from '@/app/_utils/menuItems';
 
@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
             target="_blank"
             rel="noopener noreferrer"
           >
-            <Image
+            <ExportedImage
               src="https://www.ocf.berkeley.edu/hosting-logos/ocf-hosted-penguin.svg"
               alt="Hosted by the OCF"
               width={75}

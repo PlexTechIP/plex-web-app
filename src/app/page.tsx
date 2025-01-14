@@ -1,5 +1,5 @@
 import React from 'react';
-import Image from "next/image";
+import ExportedImage from 'next-image-export-optimizer';
 import ContentSection from './_components/content/ContentSection';
 import LinkButton from './_components/button/LinkButton';
 import HeroSection from './_components/hero/HeroSection';
@@ -54,7 +54,7 @@ const Home: React.FC = () => {
             </div>
           }
           rightChildren={
-            <Image
+            <ExportedImage
               src="home/dashboard-img.webp"
               alt="Dashboard"
               className="w-full max-w-md h-auto mx-auto"
