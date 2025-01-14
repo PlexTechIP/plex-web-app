@@ -7,25 +7,25 @@ import CardSection from '@/app/_components/content/CardSection';
 const Roles: React.FC = () => {
   const pipelineRoles = [
     {
-      image: "/roles/student.webp",
+      image: "roles/student.webp",
       alt: "Student Icon",
       title: "Full Stack Course",
       content: "No experience necessary! Get your start in software engineering.",
     },
     {
-      image: "/roles/project-manager.webp",
+      image: "roles/project-manager.webp",
       alt: "Project Manager Icon",
       title: "Project Management",
       content: "Lead a team of developers. Communicate with client representatives.",
     },
     {
-      image: "/roles/developer.webp",
+      image: "roles/developer.webp",
       alt: "Developer Icon",
       title: "Industry",
       content: "Work on a client project team. Contribute to real company projects.",
     },
     {
-      image: "/roles/executive.webp",
+      image: "roles/executive.webp",
       alt: "Executive Icon",
       title: "Executive",
       content:
@@ -36,7 +36,7 @@ const Roles: React.FC = () => {
   const newMemberRoles = [
     {
       title: "Student",
-      image: "/roles/two-tracks-orange.webp",
+      image: "roles/two-tracks-orange.webp",
       description:
         "You can join the New Member Education Program with minimal programming experience. Our instructors, who have years of experience, will guide you through the basics of web development in a small, interactive group setting. You will gain plenty of hands-on experience through various projects, fully preparing you to hop onto a client project in your second semester!",
     },
@@ -45,19 +45,19 @@ const Roles: React.FC = () => {
   const developerRoles = [
     {
       title: "Work with a Variety of Clients",
-      image: "/roles/work-orange.webp",
+      image: "roles/work-orange.webp",
       description:
         "Each semester we partner with 4 clients, ranging from high-growth startups to established industry leaders. We also strive to have a variety of projects, ranging from fullstack development to machine learning to data engineering.",
     },
     {
       title: "Build Real-World Projects",
-      image: "/roles/hands-on-orange.webp",
+      image: "roles/hands-on-orange.webp",
       description:
         "We make it a priority to find substantial projects where devs can have high impact on the client, whether it be an externally facing tool or building out key web infrastructure. We create an environment as close as possible to the real software engineering industry, from code reviews to testing to team standups.",
     },
     {
       title: "Be Part of a Tight-Knit Team",
-      image: "/roles/tight-knit-team-orange.webp",
+      image: "roles/tight-knit-team-orange.webp",
       description:
         "Project teams form some of the closest bonds within PlexTech, going out for weekly team dinners as well as regular team socials and outings. It's especially unique working side-by-side with not fellow devs, but some of your closest friends.",
     },

@@ -133,7 +133,7 @@ const Join: React.FC = () => {
 
   return (
     <main>
-      <HeroSection backgroundImage="/join/join-bg.webp" title="Spring 2025 Recruitment" subtitle="Who We Are and What We Do" center={false}>
+      <HeroSection backgroundImage="join/join-bg.webp" title="Spring 2025 Recruitment" subtitle="Who We Are and What We Do" center={false}>
         <div className="flex flex-wrap justify-center gap-4">
           {heroButtons.map((button, index) => (
             <LinkButton key={index} href={button.href} isAlternate={false} innerText={button.label} />

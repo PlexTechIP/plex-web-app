@@ -8,17 +8,17 @@ import { Carousel } from '@/components/Carousel/Carousel';
 
 const Home: React.FC = () => {
   const groupImages = [
-    "/home/plextech-group-1.webp",
-    "/home/plextech-group-2.webp",
-    "/home/plextech-group-3.webp",
-    "/home/plextech-group-4.webp",
-    "/home/plextech-group-5.webp",
-    "/home/plextech-group-6.webp",
+    "home/plextech-group-1.webp",
+    "home/plextech-group-2.webp",
+    "home/plextech-group-3.webp",
+    "home/plextech-group-4.webp",
+    "home/plextech-group-5.webp",
+    "home/plextech-group-6.webp",
   ];
 
   const flyerImages = [
-    "/home/flyer-front-fa24.webp",
-    "/home/flyer-back-fa24.webp",
+    "home/flyer-front-fa24.webp",
+    "home/flyer-back-fa24.webp",
   ];
 
   const stats = [
