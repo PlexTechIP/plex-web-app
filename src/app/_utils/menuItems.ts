@@ -5,4 +5,5 @@ export const menuItems = [
   { name: 'Roles', href: '/roles' },
   { name: 'Projects', href: '/projects' },
   { name: 'Join Us', href: '/join' },
+  { name: 'Members', href: '/members/' },
 ];

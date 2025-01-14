@@ -13,7 +13,7 @@ const Join: React.FC = () => {
       label: 'Interest Form!',
     },
     {
-      href: '/apply',
+      href: '/apply/',
       label: 'Apply!',
     },
     {
@@ -47,7 +47,7 @@ const Join: React.FC = () => {
       time: "",
       description:
         "Start your journey with PlexTech at our application link! We are recruiting for new developers, curriculum students, and curriculum officers!",
-      links: [{ text: "Apply Here", href: "/apply" }],
+      links: [{ text: "Apply Here", href: "/apply/" }],
     },
     {
       date: "8/30",
@@ -76,7 +76,7 @@ const Join: React.FC = () => {
       time: "11:59 PM",
       description:
         "Once you've learned about PlexTech, submit your application here! Our application only consists of three short answer questions and a resume drop. Note that applications are due by midnight, so make sure you don't submit yours late!",
-      links: [{ text: "Apply Here", href: "/apply" }],
+      links: [{ text: "Apply Here", href: "/apply/" }],
     },
     {
       date: "9/7-9/8",
