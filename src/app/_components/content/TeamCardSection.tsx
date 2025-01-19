@@ -11,10 +11,8 @@ interface TeamCardSectionProps {
 }
 
 const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
-  const gridCols = members.length < 3 ? "justify-center" : "grid-cols-1 sm:grid-cols-2 lg:grid-cols-3";
-
   return (
-    <div className={`grid ${gridCols} gap-6`}>
+    <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`}>
       {members.map((member, index) => {
         return (
           <div key={index} className="flip-card w-[90%]">
