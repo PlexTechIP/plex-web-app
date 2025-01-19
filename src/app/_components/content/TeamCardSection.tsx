@@ -1,5 +1,5 @@
 import React from "react";
-import ExportedImage from "next-image-export-optimizer";
+import Image from 'next/image';
 import Link from "next/link";
 import { BiCoffee } from "react-icons/bi";
 import { FaLinkedinIn, FaInstagram } from "react-icons/fa";
@@ -29,11 +29,13 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                 <div className="flex justify-center">
                   {/* Profile Image */}
                   <div className="relative aspect-square rounded-full overflow-hidden mt-[20%] w-[57%]">
-                    <ExportedImage
+                    <Image
                       src={member.imageUrl ? member.imageUrl : '/team/not-found.jpg'}
                       alt={`${member.firstName}`}
-                      layout="fill"
-                      objectFit="cover"
+                      width={500}
+                      height={384}
+                      className="object-cover"
+                      sizes="(max-width: 640px) 80vw, (max-width: 1024px) 40vw, 20vw"
                     />
                   </div>
                 </div>

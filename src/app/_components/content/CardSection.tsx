@@ -1,4 +1,4 @@
-import ExportedImage from "next-image-export-optimizer";
+import Image from 'next/image';
 import React from "react";
 
 interface CardSectionProps {
@@ -15,12 +15,13 @@ const CardSection: React.FC<CardSectionProps> = ({ cards }) => {
         >
           <div className="p-2">
             <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
-              <ExportedImage
+              <Image
                 src={card.image}
                 alt={card.title}
-                layout="fill"
-                objectFit="contain"
-                className="rounded-t-lg"
+                width={500}
+                height={384}
+                className="object-contain rounded-t-lg"
+                sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 33vw"
               />
             </div>
           </div>

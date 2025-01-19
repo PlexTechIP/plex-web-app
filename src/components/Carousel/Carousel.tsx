@@ -1,17 +1,24 @@
 'use client'
 
-import ExportedImage from "next-image-export-optimizer";
+import Image from 'next/image';
 import useEmblaCarousel from "embla-carousel-react";
-import { useCallback, useEffect, useRef, useState } from "react";
+import Autoplay from "embla-carousel-autoplay";
+import { useCallback, useEffect, useState } from "react";
 
 interface CarouselProps {
   images: string[];
 }
 
 export const Carousel: React.FC<CarouselProps> = ({ images }) => {
-  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
+  const autoplayOptions = {
+    delay: 3000,
+    stopOnInteraction: false,
+  };
+
+  const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true }, [
+    Autoplay(autoplayOptions),
+  ]);
   const [selectedIndex, setSelectedIndex] = useState(0);
-  const autoplayRef = useRef<ReturnType<typeof setInterval> | null>(null);
 
   const scrollTo = useCallback(
     (index: number) => {
@@ -23,18 +30,6 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
     setSelectedIndex(emblaApi.selectedScrollSnap());
-  }, [emblaApi]);
-
-  useEffect(() => {
-    if (!emblaApi) return;
-
-    autoplayRef.current = setInterval(() => {
-      emblaApi.scrollNext();
-    }, 3000);
-
-    return () => {
-      if (autoplayRef.current) clearInterval(autoplayRef.current);
-    };
   }, [emblaApi]);
 
   useEffect(() => {
@@ -56,11 +51,13 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
               className="flex-[0_0_100%] relative"
               style={{ aspectRatio: "16/9" }}
             >
-              <ExportedImage
+              <Image
                 src={src}
                 alt={`Carousel Image ${index}`}
-                layout="fill"
-                objectFit="contain"
+                width={500}
+                height={384}
+                className="object-contain"
+                sizes="(max-width: 500px) 100vw, 500px"
               />
             </div>
           ))}
