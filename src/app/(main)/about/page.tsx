@@ -233,7 +233,7 @@ const About: React.FC = () => {
         title="Our Destinations"
         summary="PlexTech equips our members with the software engineering skills and experiences to land in the top tech companies, from FAANG to high-growth unicorns. We also have an amazing alumni network helping our new members navigate the software engineering world and find their own internship opportunities."
         isAlternate={false}
-        bgClassName="white"
+        bgClassName="bg-white"
       >
         <Image
           src="/about/destinations.webp"

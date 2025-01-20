@@ -17,14 +17,14 @@ const Home: React.FC = () => {
   ];
 
   const flyerImages = [
-    "/home/flyer-front-fa24.webp",
-    "/home/flyer-back-fa24.webp",
+    "/home/flyer-front-sp25.webp",
+    "/home/flyer-back-sp25.webp",
   ];
 
   const stats = [
-    { value: 8, label: 'Semesters of Experience' },
+    { value: 10, label: 'Semesters of Experience' },
     { value: 29, label: 'Projects Completed' },
-    { value: 42, label: 'Active Members' },
+    { value: 55, label: 'Active Members' },
   ];
 
   return (
