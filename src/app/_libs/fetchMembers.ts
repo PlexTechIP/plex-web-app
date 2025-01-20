@@ -28,7 +28,7 @@ export const fetchMembers = async (): Promise<Member[]> => {
     return {
       firstName: user.first_name,
       lastName: user.last_name,
-      imageUrl: `${process.env.NEXT_PUBLIC_URL}${user.image_url}` || undefined,
+      imageUrl: user.image_url ? `${process.env.NEXT_PUBLIC_URL}${user.image_url}` : undefined,
       position: user.current_position || "Unknown",
       blurb: user.profile_blurb || "No blurb available",
       linkedin: user.linkedin_username || undefined,
