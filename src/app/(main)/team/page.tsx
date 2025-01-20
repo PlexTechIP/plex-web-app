@@ -15,7 +15,7 @@ const Team: React.FC = () => {
       title: "Executive Board",
       description:
         "The Executive Board spearheads PlexTech as a whole, managing and planning all aspects of the club, including our external events, our client projects, curriculum, to our clubwide social events.",
-      key: ["President", "VP of Public Relations", "VP of Curriculum", "VP of Projects", "VP of External", "VP of Internal", "Treasurer"],
+      key: ["President", "VP of Internal", "VP of External", "VP of Curriculum", "VP of Projects", "VP of Public Relations", "Treasurer"],
     },
     {
       title: "Course Instructors",
@@ -74,7 +74,10 @@ const Team: React.FC = () => {
       {teamSections.map((section, index) => {
         const filteredMembers = members.filter(
           (member) => section.key.includes(member.position)
-        );
+        ).sort(
+          (a, b) =>
+            section.key.indexOf(a.position) - section.key.indexOf(b.position)
+        );;
 
         return (
           <ContentSection
