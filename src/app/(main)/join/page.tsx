@@ -143,7 +143,7 @@ const Join: React.FC = () => {
 
       {/* Timeline Section */}
       <ContentSection
-        title="Fall 2024 Recruitment Timeline"
+        title="Spring 2025 Recruitment Timeline"
         isAlternate={false}
       >
         <div className="relative">
