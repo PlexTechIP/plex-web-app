@@ -13,15 +13,14 @@ const CardSection: React.FC<CardSectionProps> = ({ cards }) => {
           key={index}
           className="bg-white shadow-lg rounded-lg w-full sm:w-80 md:w-95"
         >
-          <div className="p-2">
-            <div className="relative h-48 w-full rounded-t-lg overflow-hidden">
+          <div className="p-4">
+            <div className="relative h-36 w-full rounded-t-lg overflow-hidden">
               <Image
                 src={card.image}
                 alt={card.title}
-                width={500}
-                height={384}
-                className="object-contain rounded-t-lg"
-                sizes="(max-width: 640px) 100vw, (max-width: 768px) 80vw, 33vw"
+                width={300}
+                height={284}
+                className="object-contain rounded-t-lg w-full h-full"
               />
             </div>
           </div>

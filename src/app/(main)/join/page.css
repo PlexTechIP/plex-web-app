@@ -72,7 +72,6 @@
 /*----- TIMELINE CONTENT -----*/
 .timeline-content {
   padding-bottom: 40px;
-  font-family: 'DM SANS';
 }
 .timeline-content p:last-child {
   margin-bottom: 0;
@@ -109,7 +108,6 @@
 }
 .period .timeline-content {
   padding: 40px 0 70px;
-  font-family: 'DM SANS';
 }
 .period .timeline-title {
   margin: 0;
