@@ -11,7 +11,7 @@ interface ApiResponse {
     instagram_username: string | null;
     calendly_username: string | null;
     current_company: string | null;
-    img_url: string | null;
+    image_url: string | null;
   }[];
 }
 export const fetchMembers = async (): Promise<Member[]> => {
@@ -28,7 +28,7 @@ export const fetchMembers = async (): Promise<Member[]> => {
     return {
       firstName: user.first_name,
       lastName: user.last_name,
-      imageUrl: user.img_url || undefined,
+      imageUrl: `${process.env.NEXT_PUBLIC_URL}${user.image_url}` || undefined,
       position: user.current_position || "Unknown",
       blurb: user.profile_blurb || "No blurb available",
       linkedin: user.linkedin_username || undefined,
