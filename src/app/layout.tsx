@@ -1,10 +1,11 @@
+import { GoogleAnalytics } from '@next/third-parties/google';
+import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
-import { Analytics } from "@vercel/analytics/react"
-import { GoogleAnalytics } from '@next/third-parties/google'
 
-import "./globals.css";
-import NavBar from "./_components/nav/NavBar";
 import Footer from "./_components/footer/Footer";
+import NavBar from "./_components/nav/NavBar";
+import "./globals.css";
 
 export const metadata: Metadata = {
   title: "Home | PlexTech - Berkeley",
@@ -20,6 +21,7 @@ export default function RootLayout({
     <html lang="en">
       <GoogleAnalytics gaId="G-1ZRE4ZD52Y" />
       <Analytics />
+      <SpeedInsights />
       <body
         className="antialiased"
       >
