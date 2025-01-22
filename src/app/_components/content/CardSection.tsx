@@ -24,8 +24,8 @@ const CardSection: React.FC<CardSectionProps> = ({ cards }) => {
               />
             </div>
           </div>
-          <div className="p-6">
-            <h3 className="text-2xl font-bold mb-4 text-center">{card.title}</h3>
+          <div className="p-6 text-center">
+            <h3 className="text-2xl font-bold mb-4">{card.title}</h3>
             {card.description && <p className="text-gray-700">{card.description}</p>}
           </div>
         </div>
