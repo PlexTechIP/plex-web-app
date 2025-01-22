@@ -87,7 +87,7 @@ const Home: React.FC = () => {
         {/* Statistics Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 w-full p-6">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center font-sans font-bold">
+            <div key={index} className="text-center font-bold">
               <div className="flex justify-center">
                 <div className="text-orange-600 text-5xl md:text-8xl">
                   {stat.value}

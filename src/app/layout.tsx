@@ -2,6 +2,7 @@ import { GoogleAnalytics } from '@next/third-parties/google';
 import { Analytics } from "@vercel/analytics/react";
 import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Metadata } from "next";
+import { DM_Sans } from 'next/font/google';
 
 import Footer from "./_components/footer/Footer";
 import NavBar from "./_components/nav/NavBar";
@@ -12,13 +13,18 @@ export const metadata: Metadata = {
   description: "PlexTech is a technology club at UC Berkeley that serves one crucial purpose: to immerse motivated, ambitious, and eager students in technical software projects to set them up for a successful carreer through software industry projects, internal semester-long bootcamps, external technical workshops and a unique social presence.",
 };
 
+const dmSans = DM_Sans({
+  subsets: ['latin'],
+  variable: '--font-dm-sans'
+});
+
 export default function RootLayout({
   children,
 }: Readonly<{
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" className={dmSans.variable}>
       <GoogleAnalytics gaId="G-1ZRE4ZD52Y" />
       <Analytics />
       <SpeedInsights />
