@@ -94,7 +94,6 @@ const Team: React.FC = () => {
         })}
         <ContentSection
           title="Big-Little Tree"
-          summary="Explore the relationships between Bigs and Littles in our community."
           isAlternate={true}
         >
           <MemberTree members={members} />
