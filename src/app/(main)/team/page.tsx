@@ -6,6 +6,7 @@ import TeamCardSection from "@/app/_components/content/TeamCardSection";
 import { Member } from "@/app/_types/Member";
 import { fetchMembers } from "@/app/_libs/fetchMembers";
 import { useEffect, useState } from "react";
+import MemberTree from "./MemberTree";
 
 const Team: React.FC = () => {
   const [members, setMembers] = useState<Member[]>([]);
@@ -70,27 +71,35 @@ const Team: React.FC = () => {
         subtitle="Meet the #PlexFam"
         center={false}
       />
+      <>
+        {teamSections.map((section, index) => {
+          const filteredMembers = members.filter(
+            (member) => section.key.includes(member.position)
+          ).sort(
+            (a, b) =>
+              section.key.indexOf(a.position) - section.key.indexOf(b.position)
+          );;
 
-      {teamSections.map((section, index) => {
-        const filteredMembers = members.filter(
-          (member) => section.key.includes(member.position)
-        ).sort(
-          (a, b) =>
-            section.key.indexOf(a.position) - section.key.indexOf(b.position)
-        );;
-
-        return (
-          <ContentSection
-            key={index}
-            title={section.title}
-            summary={section.description}
-            isAlternate={false}
-            bgClassName="bg-white"
-          >
-            <TeamCardSection members={filteredMembers} />
-          </ContentSection>
-        );
-      })}
+          return (
+            <ContentSection
+              key={index}
+              title={section.title}
+              summary={section.description}
+              isAlternate={false}
+              bgClassName="bg-white"
+            >
+              <TeamCardSection members={filteredMembers} />
+            </ContentSection>
+          );
+        })}
+        <ContentSection
+          title="Big-Little Tree"
+          summary="Explore the relationships between Bigs and Littles in our community."
+          isAlternate={true}
+        >
+          <MemberTree members={members} />
+        </ContentSection>
+      </>
     </main>
   );
 };

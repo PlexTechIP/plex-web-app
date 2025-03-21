@@ -1,4 +1,5 @@
 export interface Member {
+  id: string;
   firstName: string;
   lastName: string;
   imageUrl?: string; // Located in plex within public/, ordered by UUID
@@ -8,4 +9,5 @@ export interface Member {
   instagram?: string;
   calendly?: string;
   currentCompany?: string;
+  bigId?: string;
 }
