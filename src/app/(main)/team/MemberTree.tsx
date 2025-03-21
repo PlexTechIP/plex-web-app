@@ -41,8 +41,8 @@ const createMemberHierarchy = (members: Member[]): ExtendedTreeNodeDatum[] => {
     name: "PlexTech Members",
     value: "PlexTech Members",
     children: [],
-    firstName: "Akshat",
-    lastName: "Jain",
+    firstName: "",
+    lastName: "",
     __rd3t: {
       id: "",
       depth: 0,
@@ -86,17 +86,15 @@ const renderRectSvgNode = (props: CustomNodeElementProps) => {
 
   return (
     <g onClick={props.toggleNode}>
-      <circle r={30} fill="#FFFFFF" />
-      {imageUrl && (
-        <image
-          href={imageUrl}
-          x={-25}
-          y={-25}
-          height={50}
-          width={50}
-          clipPath="url(#circleClip)"
-        />
-      )}
+      <circle r={27} fill="#FFFFFF" />
+      <image
+        href={imageUrl || "/plextech-logo.webp"}
+        x={-25}
+        y={-25}
+        height={50}
+        width={50}
+        clipPath="url(#circleClip)"
+      />
       <clipPath id="circleClip">
         <circle r={25} cx={0} cy={0} />
       </clipPath>
