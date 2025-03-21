@@ -12,6 +12,7 @@ const nextConfig: NextConfig = {
         hostname: "www.ocf.berkeley.edu",
       },
     ],
+    unoptimized: false,
   },
 };
 
