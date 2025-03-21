@@ -12,6 +12,7 @@ interface ApiResponse {
     calendly_username: string | null;
     current_company: string | null;
     image_url: string | null;
+    big_id: string | null;
   }[];
 }
 export const fetchMembers = async (): Promise<Member[]> => {
@@ -26,6 +27,7 @@ export const fetchMembers = async (): Promise<Member[]> => {
 
   const members = data.users.map((user) => {
     return {
+      id: user.id,
       firstName: user.first_name,
       lastName: user.last_name,
       imageUrl: user.image_url ? `${process.env.NEXT_PUBLIC_URL}${user.image_url}` : undefined,
@@ -35,6 +37,7 @@ export const fetchMembers = async (): Promise<Member[]> => {
       instagram: user.instagram_username || undefined,
       calendly: user.calendly_username || undefined,
       currentCompany: user.current_company || undefined,
+      bigId: user.big_id || undefined,
     };
   });
 
