@@ -38,7 +38,7 @@ const NavBar: React.FC = () => {
     <>
       <header
         className={`fixed top-0 z-50 w-full transition-all duration-300 ${
-          isScrolled ? 'bg-white shadow-md text-black' : 'bg-transparent text-white border-b border-white/20'
+          isScrolled ? 'bg-white text-black' : 'bg-transparent text-white'
         }`}
       >
         <div className="container mx-auto px-4">
