@@ -15,7 +15,7 @@ const Team: React.FC = () => {
     {
       title: "Executive Board",
       description:
-        "The Executive Board spearheads PlexTech as a whole, managing and planning all aspects of the club, including our external events, our client projects, curriculum, to our clubwide social events.",
+        "The Executive Board spearheads PlexTech as a whole, managing and planning all aspects of the club, including client projects, curriculum, and clubwide social events.",
       key: ["President", "VP of Internal", "VP of External", "VP of Curriculum", "VP of Projects", "VP of Public Relations", "Treasurer"],
     },
     {

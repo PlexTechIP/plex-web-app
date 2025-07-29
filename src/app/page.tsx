@@ -16,11 +16,13 @@ const Home: React.FC = () => {
     "/home/plextech-group-6.webp",
   ];
 
-  const flyerImages = [
+  //TODO: Update with Fall 2025
+  const flyerImages = [ 
     "/home/flyer-front-sp25.webp",
     "/home/flyer-back-sp25.webp",
   ];
 
+  // TODO: Update values
   const stats = [
     { value: 10, label: 'Semesters of Experience' },
     { value: 29, label: 'Projects Completed' },
@@ -104,7 +106,7 @@ const Home: React.FC = () => {
 
       {/* Recruitment Section */}
       <ContentSection
-        title="Spring 2025 Recruitment"
+        title="Fall 2025 Recruitment"
         summary="We're always looking to add new members to our growing community. We welcome all Berkeley students to apply and join our community, regardless of major or technical experience."
         isAlternate={true}
         bgClassName='bg-gradient-to-br from-[#FF833D] via-[#F06751] via-[#E04867] via-[#B9009B] to-[#A736CE]'
