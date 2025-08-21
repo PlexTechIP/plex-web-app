@@ -17,7 +17,7 @@ const Home: React.FC = () => {
   ];
 
   const flyerImages = [
-    "/home/flyer-front-sp25.webp",
+    "/home/flyer-front-fa25.webp",
     "/home/flyer-back-sp25.webp",
   ];
 
@@ -104,7 +104,7 @@ const Home: React.FC = () => {
 
       {/* Recruitment Section */}
       <ContentSection
-        title="Spring 2025 Recruitment"
+        title="Fall 2025 Recruitment"
         summary="We're always looking to add new members to our growing community. We welcome all Berkeley students to apply and join our community, regardless of major or technical experience."
         isAlternate={true}
         bgClassName='bg-gradient-to-br from-[#FF833D] via-[#F06751] via-[#E04867] via-[#B9009B] to-[#A736CE]'
