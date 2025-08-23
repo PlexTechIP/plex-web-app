@@ -16,11 +16,13 @@ const Home: React.FC = () => {
     "/home/plextech-group-6.webp",
   ];
 
-  const flyerImages = [
+  //TODO: Update with Fall 2025
+  const flyerImages = [ 
     "/home/flyer-front-fa25.webp",
-    "/home/flyer-back-sp25.webp",
+    "/home/flyer-back-fa25.webp",
   ];
 
+  // TODO: Update values
   const stats = [
     { value: 10, label: 'Semesters of Experience' },
     { value: 29, label: 'Projects Completed' },
