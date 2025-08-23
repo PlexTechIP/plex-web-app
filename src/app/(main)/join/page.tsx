@@ -9,7 +9,7 @@ import React from "react";
 const Join: React.FC = () => {
   const heroButtons = [
     {
-      href: 'https://docs.google.com/forms/d/e/1FAIpQLSdlpPcvsT-Tqrh_pckZEgYTQoGukbEEb59FKQqzRL8IgLMJVA/viewform',
+      href: 'https://forms.gle/ctBoq1xB9Yy3WigK6',
       label: 'Interest Form!',
     },
     {
@@ -24,25 +24,25 @@ const Join: React.FC = () => {
 
   const timelineEvents = [
     {
-      date: "1/21 - 1/28",
+      date: "8/27 - 9/4",
       title: "Tabling and Coffee Chats",
       time: "8 AM - 4 PM, Memorial Glade / Sproul",
       description:
         "Tabling is a great chance to meet members of PlexTech and learn more about our recruitment process. We will host in-person tabling at Memorial Glade and Upper Sproul. We also encourage you to sign up for 1-1 coffee chats with our exec members and fill out our interest form to keep updated with our recruitment events!",
       links: [
         { text: "Calendly Links", href: "/team" },
-        { text: "Interest Form", href: "https://docs.google.com/forms/d/e/1FAIpQLSdlpPcvsT-Tqrh_pckZEgYTQoGukbEEb59FKQqzRL8IgLMJVA/viewform" },
+        { text: "Interest Form", href: "https://forms.gle/ctBoq1xB9Yy3WigK6" },
       ],
     },
     {
-      date: "1/27",
+      date: "8/29",
       title: "Clubs & Cookies",
-      time: "8 PM - 10:00 PM, Location: TBD",
+      time: "8 PM - 10 PM, Location: Dwinelle 155",
       description:
         "Stressed about club recruitment? Clubs and Cookies is an ambitious crossover event of a diverse set of technical student organizations at UC Berkeley. Join us to learn about web development, machine learning, data science, and more, and have your questions answered by our group of experienced panelists.",
     },
     {
-      date: "1/21",
+      date: "8/27",
       title: "Applications Released!",
       time: "",
       description:
@@ -50,28 +50,28 @@ const Join: React.FC = () => {
       links: [{ text: "Apply Here", href: `${process.env.NEXT_PUBLIC_URL}/apply` }],
     },
     {
-      date: "1/28",
+      date: "9/2",
       title: "Infosession #1",
-      time: "8 PM - 10 PM, Location: Dwinelle 145",
+      time: "8 PM - 10 PM, Location: Dwinelle 219",
       description:
         "Our infosessions are great opportunities to learn more about PlexTech and meet our members! Learn more about the different positions we're recruiting for, the recruitment process, and the great experiences and social events we'll be offering this semester, no matter your experience level.",
     },
     {
-      date: "1/30",
+      date: "9/3",
       title: "Women in PlexTech Panel",
-      time: "8 PM - 9 PM, Location: Dwinelle 145",
+      time: "8 PM - 9 PM, Location: Dwinelle 219",
       description:
         "PlexTech places a great amount of importance on gender diversity in tech. Join our event to meet the female and non-binary identifying members of our club over complimentary snacks and refreshments.",
     },
     {
-      date: "1/30",
+      date: "9/4",
       title: "Infosession #2",
-      time: "9 PM - 10 PM, Location: Dwinelle 145",
+      time: "9 PM - 10 PM, Location: Dwinelle 219",
       description:
         "Our infosessions are great opportunities to learn more about PlexTech and meet our members! Learn more about the different positions we're recruiting for, the recruitment process, and the great experiences and social events we'll be offering this semester, no matter your experience level.",
     },
     {
-      date: "1/30",
+      date: "9/4",
       title: "Application Deadline",
       time: "11:59 PM",
       description:
@@ -79,32 +79,32 @@ const Join: React.FC = () => {
       links: [{ text: "Apply Here", href: `${process.env.NEXT_PUBLIC_URL}/apply` }],
     },
     {
-      date: "2/1-2/2",
+      date: "9/6-9/7",
       title: "Technical Interviews",
       time: "(Invite Only)",
       description:
         "After we review online applications, keep an eye out for decisions and instructions for how to prepare for your interview. This semester, we're completely revamping our technical interview process. Technical interviews will focus on your learning abilities and problem-solving skills, while establishing baseline knowledge of preliminary computer science concepts. Curriculum instructors will have a separate technical interview where applicants will simulate teaching a lesson.",
     },
     {
-      date: "2/3",
+      date: "9/8",
       title: "Application Social: Meet PlexTech!",
       time: "(Invite Only)",
       description:
         "For those who make it past the written application review, congratulations! Applicants who move to forward stages will be invited to attend our recruitment social for a low stakes event to get to know PlexTech more intimately.",
     },
     {
-      date: "2/4",
+      date: "9/9",
       title: "Behavioral Interviews",
       time: "(Invite Only)",
       description:
         "The last step of the interview process, behavioral interviews are meant to be conducted in a relaxed and informal setting. This gives us an opportunity to get to know you better and see if you're a great fit for PlexTech!",
     },
     {
-      date: "2/5",
+      date: "9/10",
       title: "Decisions Released",
       time: "",
       description:
-        "Mark your calendars and keep an eye on your email! Decisions will be released on Wednesday, February 5.",
+        "Mark your calendars and keep an eye on your email! Decisions will be released on Wednesday, September 10.",
     },
   ];
 
@@ -133,7 +133,7 @@ const Join: React.FC = () => {
 
   return (
     <main>
-      <HeroSection backgroundImage="join/join-bg.webp" title="Spring 2025 Recruitment" subtitle="Who We Are and What We Do" center={false}>
+      <HeroSection backgroundImage="join/join-bg.webp" title="Fall 2025 Recruitment" subtitle="Who We Are and What We Do" center={false}>
         <div className="flex flex-wrap justify-center gap-4">
           {heroButtons.map((button, index) => (
             <LinkButton key={index} href={button.href} isAlternate={false} innerText={button.label} />
@@ -143,7 +143,7 @@ const Join: React.FC = () => {
 
       {/* Timeline Section */}
       <ContentSection
-        title="Spring 2025 Recruitment Timeline"
+        title="Fall 2025 Recruitment Timeline"
         isAlternate={false}
       >
         <div className="relative">

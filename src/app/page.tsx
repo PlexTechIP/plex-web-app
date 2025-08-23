@@ -18,8 +18,8 @@ const Home: React.FC = () => {
 
   //TODO: Update with Fall 2025
   const flyerImages = [ 
-    "/home/flyer-front-sp25.webp",
-    "/home/flyer-back-sp25.webp",
+    "/home/flyer-front-fa25.webp",
+    "/home/flyer-back-fa25.webp",
   ];
 
   // TODO: Update values
