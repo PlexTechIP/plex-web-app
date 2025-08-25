@@ -26,7 +26,7 @@ const Home: React.FC = () => {
   const stats = [
     { value: 10, label: 'Semesters of Experience' },
     { value: 29, label: 'Projects Completed' },
-    { value: 55, label: 'Active Members' },
+    { value: 50, label: 'Active Members' },
   ];
 
   return (
