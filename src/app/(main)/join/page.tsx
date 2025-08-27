@@ -46,7 +46,7 @@ const Join: React.FC = () => {
       title: "Applications Released!",
       time: "",
       description:
-        "Start your journey with PlexTech at our application link! We are recruiting for new developers, curriculum students, and curriculum officers!",
+        "Start your journey with PlexTech at our application link! We are recruiting for new curriculum students!",
       links: [{ text: "Apply Here", href: "https://airtable.com/appNho8H4HsMVRgSU/pagTPYkRUbC2lHdzr/form" }],
     },
     {
