@@ -59,14 +59,14 @@ const Join: React.FC = () => {
     {
       date: "9/3",
       title: "Women in PlexTech Panel",
-      time: "8 PM - 9 PM, Location: Dwinelle 219",
+      time: "8 PM - 10 PM, Location: Dwinelle 219",
       description:
         "PlexTech places a great amount of importance on gender diversity in tech. Join our event to meet the female and non-binary identifying members of our club over complimentary snacks and refreshments.",
     },
     {
       date: "9/4",
       title: "Infosession #2",
-      time: "9 PM - 10 PM, Location: Dwinelle 219",
+      time: "8 PM - 10 PM, Location: Dwinelle 219",
       description:
         "Our infosessions are great opportunities to learn more about PlexTech and meet our members! Learn more about the different positions we're recruiting for, the recruitment process, and the great experiences and social events we'll be offering this semester, no matter your experience level.",
     },
