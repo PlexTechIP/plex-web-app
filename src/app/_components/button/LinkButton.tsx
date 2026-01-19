@@ -19,7 +19,7 @@ const LinkButton: React.FC<LinkButtonProps> = ({
       <Link href={href} passHref>
         <button
           type="button"
-          className={`btn btn-secondary px-6 py-2 text-xl rounded-xl hover:bg-orange-600 hover:text-white ${styles}`}
+          className={`btn btn-secondary px-6 py-2 text-xl rounded-xl transition-all duration-200 shadow-md hover:-translate-y-0.5 hover:bg-orange-600 hover:text-white hover:shadow-lg active:translate-y-0 ${styles}`}
         >
           {innerText}
         </button>

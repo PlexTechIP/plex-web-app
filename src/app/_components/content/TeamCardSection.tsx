@@ -15,7 +15,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
     <div className={`grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6`}>
       {members.map((member, index) => {
         return (
-          <div key={index} className="flip-card w-[90%]">
+          <div key={index} className="flip-card w-[85%]">
             <div className="flip-card-inner">
               {/* Front Side */}
               <div
@@ -26,7 +26,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
               >
                 <div className="flex justify-center">
                   {/* Profile Image */}
-                  <div className="relative aspect-square rounded-full overflow-hidden mt-[20%] w-[57%]">
+                  <div className="relative aspect-square rounded-full overflow-hidden mt-[16%] w-[50%]">
                     <Image
                       src={member.imageUrl ? member.imageUrl : '/team/not-found.jpg'}
                       alt={`${member.firstName}`}
@@ -39,20 +39,20 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                 </div>
 
                 {/* Profile Details */}
-                <div className="absolute bottom-5 w-full text-center">
-                  <h5 className="font-bold text-2xl">
+                <div className="absolute bottom-5 w-full text-center px-6">
+                  <h5 className="font-bold text-xl">
                     {member.firstName + " " + member.lastName}
                   </h5>
-                  <h6 className="font-semibold text-xl text-gray-500">
+                  <h6 className="font-semibold text-base text-gray-500">
                     {member.position}
                   </h6>
                   {member.position === "Alumni" && (
-                    <p className="text-sm text-gray-600">
+                    <p className="text-xs text-gray-600">
                       {member.currentCompany}
                     </p>
                   )}
                   <div className="flex justify-center">
-                    <div className="rounded-full bg-orange-400 text-white mt-5 px-4 py-2 text-center max-w-fit">
+                    <div className="rounded-full bg-orange-400 text-white mt-4 px-4 py-1.5 text-center text-sm max-w-fit shadow-sm">
                       Hover to learn more!
                     </div>
                   </div>

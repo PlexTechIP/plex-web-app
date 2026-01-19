@@ -20,19 +20,20 @@ const ContentSection: React.FC<ContentSectionProps> = ({
   const appliedBgImageConfig = !bgClassName && bgImage
     ? `bg-contain bg-center`
     : "";
-  const textColor = isAlternate ? "text-white" : "text-black";
-  const highlightColor = isAlternate ? "bg-white" : "bg-orange-500";
+  const textColor = isAlternate ? "text-white" : "text-slate-900";
+  const summaryColor = isAlternate ? "text-white/80" : "text-slate-600";
+  const highlightColor = isAlternate ? "bg-white/70" : "bg-orange-500";
 
   return (
     <section
-      className={`py-16 ${appliedBgClass} ${appliedBgImageConfig} ${textColor}`}
+      className={`py-14 md:py-16 ${appliedBgClass} ${appliedBgImageConfig} ${textColor}`}
       style={!bgClassName && bgImage ? { backgroundImage: `url('${bgImage}')` } : {}}
     >
       <div className="container mx-auto px-6">
-        <div className="mb-12 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mt-5">{title}</h2>
-          <div className={`mx-auto my-4 w-32 h-1 ${highlightColor}`}></div>
-          {summary && <p className="text-xl mt-4">{summary}</p>}
+        <div className="mb-8 text-center max-w-3xl mx-auto">
+          <h2 className="text-2xl md:text-3xl font-semibold tracking-tight">{title}</h2>
+          <div className={`mx-auto my-3 w-16 h-1 rounded-full ${highlightColor}`}></div>
+          {summary && <p className={`text-base md:text-lg mt-3 ${summaryColor}`}>{summary}</p>}
         </div>
         {children}
       </div>

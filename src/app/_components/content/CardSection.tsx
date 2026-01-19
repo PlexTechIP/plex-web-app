@@ -6,12 +6,15 @@ interface CardSectionProps {
 }
 
 const CardSection: React.FC<CardSectionProps> = ({ cards }) => {
+  const isSingle = cards.length === 1;
   return (
-    <div className="flex justify-center flex-wrap gap-6 p-4 text-black">
+    <div className="flex flex-wrap justify-center gap-6 p-4 text-black">
       {cards.map((card, index) => (
         <div
           key={index}
-          className="bg-white shadow-lg rounded-lg w-full sm:w-80 md:w-95"
+          className={`group bg-white shadow-lg rounded-lg w-full transition-all duration-300 hover:-translate-y-1 hover:shadow-xl ${
+            isSingle ? "max-w-sm" : "sm:w-80"
+          }`}
         >
           <div className="p-4">
             <div className="relative h-36 w-full rounded-t-lg overflow-hidden">
@@ -20,7 +23,7 @@ const CardSection: React.FC<CardSectionProps> = ({ cards }) => {
                 alt={card.title}
                 width={300}
                 height={284}
-                className="object-contain rounded-t-lg w-full h-full"
+                className="object-contain rounded-t-lg w-full h-full transition-transform duration-300 group-hover:scale-105"
               />
             </div>
           </div>

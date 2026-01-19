@@ -121,7 +121,6 @@ const Projects: React.FC = () => {
         subtitle="Find your footing in the software industry"
         center={false}
       >
-        <LinkButton href="/join" isAlternate={false} innerText="Apply!" />
       </HeroSection>
 
       {/* Our Services Section */}
@@ -163,7 +162,7 @@ const Projects: React.FC = () => {
           We welcome all Berkeley students, regardless of technical experience, with a role to fit your social and professional goals."
         isAlternate={false}
       >
-        <div className="bg-white p-8 shadow-md rounded-lg">
+        <div className="bg-white/90 p-6 md:p-8 border border-slate-200 rounded-xl shadow-sm">
           <Form
             action="https://formspree.io/xayoeqwa"
             className="space-y-6"
@@ -210,7 +209,7 @@ const Projects: React.FC = () => {
             <div className="text-right">
               <button
                 type="submit"
-                className="px-6 py-2 bg-orange-500 text-white rounded-md shadow-md hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
+                className="px-6 py-2 bg-orange-500 text-white rounded-full shadow-sm hover:bg-orange-600 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-orange-500"
               >
                 Send
               </button>

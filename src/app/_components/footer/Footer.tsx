@@ -6,11 +6,11 @@ import { menuItems } from '@/app/_utils/menuItems';
 
 const Footer: React.FC = () => {
   return (
-    <footer className="bg-orange-500 text-white p-10">
-      <div className="container mx-auto flex flex-wrap justify-evenly">
+    <footer className="bg-slate-900 text-white px-6 py-12">
+      <div className="container mx-auto flex flex-wrap justify-between gap-10">
         {/* Description Section */}
-        <div className="w-full md:w-1/3 mb-6 md:mb-0">
-          <p className="text-white text-lg">
+        <div className="w-full md:w-1/3">
+          <p className="text-white/80 text-lg">
             We are a student group acting independent of the University of California. We take full responsibility for
             our organization and this web site.
           </p>
@@ -25,20 +25,20 @@ const Footer: React.FC = () => {
               alt="Hosted by the OCF"
               width={75}
               height={50}
-              className="border-0 py-2"
+              className="border-0 py-3"
             />
           </Link>
-          <hr className="border-white mb-4" />
-          <p className="text-white">Copyright &copy; {new Date().getFullYear()} All rights reserved</p>
+          <hr className="border-white/20 my-4" />
+          <p className="text-white/70 text-sm">Copyright &copy; {new Date().getFullYear()} All rights reserved</p>
         </div>
 
         {/* Quick Links Section */}
-        <div className="w-full md:w-1/4 mb-6 md:mb-0">
-          <h2 className="text-lg font-bold text-white mb-4">Quick Links</h2>
+        <div className="w-full md:w-1/4">
+          <h2 className="text-lg font-semibold text-white mb-4">Quick Links</h2>
           <ul className="space-y-2">
             {menuItems.map((item) => (
               <li key={item.name}>
-                <Link href={item.href} passHref className="hover:underline">
+                <Link href={item.href} passHref className="text-white/80 hover:text-white">
                   {item.name}
                 </Link>
               </li>
@@ -48,14 +48,14 @@ const Footer: React.FC = () => {
 
         {/* Follow Us Section */}
         <div className="w-full md:w-1/4">
-          <h2 className="text-lg font-bold text-white mb-4">Follow Us</h2>
+          <h2 className="text-lg font-semibold text-white mb-4">Follow Us</h2>
           <div className="flex space-x-4 text-2xl">
             <Link
               href="https://www.facebook.com/PlexTech-100710408175971/"
               passHref
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300"
+              className="text-white/80 hover:text-white"
             >
               <FaFacebookF />
             </Link>
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
               passHref
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300"
+              className="text-white/80 hover:text-white"
             >
               <FaLinkedinIn />
             </Link>
@@ -73,7 +73,7 @@ const Footer: React.FC = () => {
               passHref
               target="_blank"
               rel="noopener noreferrer"
-              className="hover:text-gray-300"
+              className="text-white/80 hover:text-white"
             >
               <FaInstagram />
             </Link>

@@ -73,18 +73,27 @@ const Roles: React.FC = () => {
         summary="PlexTech's purpose is to serve the entire software engineering pipeline, from having no prior experience to becoming tech leaders. We highly encourage members at all stages to take leadership roles and constantly progress every semester."
         isAlternate={false}
       >
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {pipelineRoles.map((role, index) => (
-            <div key={index} className="flex flex-col items-center text-center">
-              <Image src={role.image} alt={role.alt} width={150} height={150} className="object-contain"/>
-              <h4 className="mt-4 font-bold text-lg">{role.title}</h4>
-              <p className="mt-2 text-gray-700">{role.content}</p>
+            <div
+              key={index}
+              className="flex flex-col items-center text-center rounded-xl border border-slate-200 bg-white/90 p-5 shadow-sm"
+            >
+              <Image src={role.image} alt={role.alt} width={120} height={120} className="object-contain"/>
+              <h4 className="mt-4 font-semibold text-lg text-slate-900">{role.title}</h4>
+              <p className="mt-2 text-sm text-slate-600">{role.content}</p>
             </div>
           ))}
         </div>
 
         <div className="flex justify-center mt-10">
-          <Image src="/roles/pipeline.webp" alt="Pipeline Outline" width={800} height={200} />
+          <Image
+            src="/roles/pipeline.webp"
+            alt="Pipeline Outline"
+            width={800}
+            height={200}
+            className=""
+          />
         </div>
       </ContentSection>
 
@@ -97,7 +106,7 @@ const Roles: React.FC = () => {
         <CardSection cards={newMemberRoles} />
 
         <div className='mt-8'>
-          <LinkButton href='/join' isAlternate={true} innerText='Apply to be a new member!' />
+          <LinkButton href='/join/apply' isAlternate={true} innerText='Apply to be a new member!' />
         </div>
       </ContentSection>
 

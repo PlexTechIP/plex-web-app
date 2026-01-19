@@ -16,16 +16,15 @@ const Home: React.FC = () => {
     "/home/plextech-group-6.webp",
   ];
 
-  //TODO: Update with Fall 2025
+  //TODO: Update with Spring 2026
   const flyerImages = [ 
     "/home/flyer-front-fa25.webp",
-    "/home/flyer-back-fa25.webp",
   ];
 
   // TODO: Update values
   const stats = [
-    { value: 10, label: 'Semesters of Experience' },
-    { value: 29, label: 'Projects Completed' },
+    { value: 12, label: 'Semesters of Experience' },
+    { value: 33, label: 'Projects Completed' },
     { value: 50, label: 'Active Members' },
   ];
 
@@ -46,11 +45,11 @@ const Home: React.FC = () => {
                   journey into tech!
                 </p>
               </div>
-              <p className="text-xl lg:text-2xl mt-4 font-bold">
-                PlexTech, UC Berkeley&#39;s Premier Software Engineering Student Organization
+              <p className="text-xl lg:text-2xl mt-4 font-semibold">
+                PlexTech, UC Berkeley&#39;s software engineering organization
               </p>
               <div className="flex mt-4 space-x-4 justify-center lg:justify-start">
-                <LinkButton href="/join" isAlternate={false} innerText="Apply!" />
+                <LinkButton href="/join/apply" isAlternate={false} innerText="Apply Now" />
                 <LinkButton href="/about" isAlternate={true} innerText="Learn More!" />
               </div>
             </div>
@@ -68,7 +67,7 @@ const Home: React.FC = () => {
       </HeroSection>
 
       {/* We Are PlexTech Section */}
-      <ContentSection title="We Are PlexTech" isAlternate={false}>
+      <ContentSection title="About PlexTech" isAlternate={false}>
         <LeftToRightContent
           leftChildren={
             <Carousel images={groupImages} />
@@ -87,33 +86,35 @@ const Home: React.FC = () => {
           }
         />
         {/* Statistics Section */}
-        <div className="grid grid-cols-1 md:grid-cols-3 w-full p-6">
+        <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8 mt-6">
           {stats.map((stat, index) => (
-            <div key={index} className="text-center font-bold">
+            <div key={index} className="text-center font-semibold rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm">
               <div className="flex justify-center">
-                <div className="text-orange-600 text-5xl md:text-8xl">
+                <div className="text-orange-500 text-4xl md:text-5xl font-bold">
                   {stat.value}
                 </div>
               </div>
-              <div className="text-2xl md:text-3xl m-4">
+              <div className="text-lg md:text-xl mt-5 text-slate-600">
                 {stat.label}
               </div>
             </div>
           ))}
         </div>
-        <LinkButton href="/about" isAlternate={false} innerText="About Us" />
+        <div className="mt-8 flex justify-center">
+          <LinkButton href="/about" isAlternate={false} innerText="About the Org" />
+        </div>
       </ContentSection>
 
       {/* Recruitment Section */}
       <ContentSection
-        title="Fall 2025 Recruitment"
+        title="Spring 2026 Recruitment & Applications"
         summary="We're always looking to add new members to our growing community. We welcome all Berkeley students to apply and join our community, regardless of major or technical experience."
         isAlternate={true}
         bgClassName='bg-gradient-to-br from-[#FF833D] via-[#F06751] via-[#E04867] via-[#B9009B] to-[#A736CE]'
       >
         <Carousel images={flyerImages} />
         <div className='pt-8'>
-          <LinkButton href="/join" isAlternate={false} innerText="Join Us" />
+          <LinkButton href="/join/apply" isAlternate={false} innerText="Apply!" />
         </div>
       </ContentSection>
     </main>

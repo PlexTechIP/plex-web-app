@@ -5,5 +5,5 @@ export const menuItems = [
   { name: 'Roles', href: '/roles' },
   { name: 'Projects', href: '/projects' },
   { name: 'Join Us', href: '/join' },
-  { name: 'Members', href: `${process.env.NEXT_PUBLIC_URL}/members` },
+  { name: 'Members Portal', href: `${process.env.NEXT_PUBLIC_URL}/members` },
 ];
