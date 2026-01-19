@@ -66,7 +66,7 @@ const About: React.FC = () => {
           {aboutSections.map((section, index) => (
             <div
               key={section.title}
-              className={`py-12 border-b border-slate-200 last:border-b-0 ${
+              className={`-mx-6 px-6 py-12 border-b border-slate-200 last:border-b-0 ${
                 index % 2 === 0 ? "bg-slate-50" : "bg-white"
               }`}
             >
