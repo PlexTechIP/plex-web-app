@@ -1,5 +1,4 @@
 import HeroSection from "@/app/_components/hero/HeroSection";
-import ContentSection from "@/app/_components/content/ContentSection";
 import LinkButton from "@/app/_components/button/LinkButton";
 
 import './page.css'

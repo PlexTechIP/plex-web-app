@@ -2,7 +2,6 @@ import Form from 'next/form'
 import HeroSection from "@/app/_components/hero/HeroSection";
 import ContentSection from "@/app/_components/content/ContentSection";
 import CardSection from "@/app/_components/content/CardSection";
-import LinkButton from "@/app/_components/button/LinkButton";
 import DividedTextCarousel from "@/components/Carousel/DividedTextCarousel";
 import InputField from "@/components/ContactForm/InputField";
 import TextAreaField from "@/components/ContactForm/TextAreaField";
