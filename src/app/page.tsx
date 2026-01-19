@@ -18,7 +18,8 @@ const Home: React.FC = () => {
 
   //TODO: Update with Spring 2026
   const flyerImages = [ 
-    "/home/flyer-front-fa25.webp",
+    "/home/flyer-front-sp26.webp",
+    "/home/flyer-back-sp26.webp",
   ];
 
   // TODO: Update values
