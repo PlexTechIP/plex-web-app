@@ -64,7 +64,12 @@ const About: React.FC = () => {
             </div>
           </div>
           {aboutSections.map((section, index) => (
-            <div key={section.title} className="py-12 border-b border-slate-200 last:border-b-0">
+            <div
+              key={section.title}
+              className={`py-12 border-b border-slate-200 last:border-b-0 ${
+                index % 2 === 0 ? "bg-slate-50" : "bg-white"
+              }`}
+            >
               <LeftToRightContent
                 leftChildren={
                   <div>

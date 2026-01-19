@@ -86,7 +86,7 @@ const Team: React.FC = () => {
               title={section.title}
               summary={section.description}
               isAlternate={false}
-              bgClassName="bg-white"
+              bgClassName={index % 2 === 0 ? "bg-slate-50" : "bg-white"}
             >
               <TeamCardSection members={filteredMembers} />
             </ContentSection>
@@ -95,6 +95,7 @@ const Team: React.FC = () => {
         <ContentSection
           title="Big-Little Tree"
           isAlternate={true}
+          bgClassName="bg-slate-50"
         >
           <MemberTree members={members} />
         </ContentSection>
