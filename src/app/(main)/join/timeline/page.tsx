@@ -19,7 +19,7 @@ const JoinTimeline: React.FC = () => {
     {
       date: "1/26",
       title: "Clubs & Cookies",
-      time: "8 PM - 10 PM, Location: TBD",
+      time: "8 PM - 10 PM, Location: Dwinelle 155",
       description:
         "Stressed about club recruitment? Clubs and Cookies is an ambitious crossover event of a diverse set of technical student organizations at UC Berkeley. Join us to learn about web development, machine learning, data science, and more, and have your questions answered by our group of experienced panelists.",
     },
@@ -34,21 +34,21 @@ const JoinTimeline: React.FC = () => {
     {
       date: "1/27",
       title: "Infosession #1",
-      time: "8 PM - 10 PM, Location: Dwinelle 219",
+      time: "8 PM - 10 PM, Location: Dwinelle 234",
       description:
         "Our infosessions are great opportunities to learn more about PlexTech and meet our members! Learn more about the different positions we're recruiting for, the recruitment process, and the great experiences and social events we'll be offering this semester, no matter your experience level.",
     },
     {
       date: "1/28",
       title: "Women in PlexTech Panel",
-      time: "8 PM - 10 PM, Location: Dwinelle 219",
+      time: "8 PM - 10 PM, Location: Dwinelle 234",
       description:
         "PlexTech places a great amount of importance on gender diversity in tech. Join our event to meet the female and non-binary identifying members of our club over complimentary snacks and refreshments.",
     },
     {
       date: "1/29",
       title: "Infosession #2",
-      time: "8 PM - 10 PM, Location: Dwinelle 219",
+      time: "8 PM - 10 PM, Location: Dwinelle 228",
       description:
         "Our infosessions are great opportunities to learn more about PlexTech and meet our members! Learn more about the different positions we're recruiting for, the recruitment process, and the great experiences and social events we'll be offering this semester, no matter your experience level.",
     },
