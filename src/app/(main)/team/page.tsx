@@ -10,26 +10,6 @@ import MemberTree from "./MemberTree";
 
 const Team: React.FC = () => {
   const [members, setMembers] = useState<Member[]>([]);
-  const previewMembers: Member[] = [
-    {
-      id: "preview-1",
-      firstName: "Alex",
-      lastName: "Nguyen",
-      position: "VP of External",
-      blurb:
-        "Focused on partnerships, outreach, and building long-term relationships with sponsors and campus groups.",
-      imageUrl: "/team/not-found.jpg",
-    },
-    {
-      id: "preview-2",
-      firstName: "Jamie",
-      lastName: "Lee",
-      position: "VP of Curriculum",
-      blurb:
-        "Leads the education program and curriculum design to help new members ramp quickly and confidently.",
-      imageUrl: "/team/not-found.jpg",
-    },
-  ];
 
   const teamSections = [
     {
@@ -91,14 +71,6 @@ const Team: React.FC = () => {
         subtitle="Meet the #PlexFam"
         center={false}
       />
-      <ContentSection
-        title="Team Card Preview"
-        summary="Example cards to visualize the layout and styling."
-        isAlternate={false}
-        bgClassName="bg-slate-50"
-      >
-        <TeamCardSection members={previewMembers} />
-      </ContentSection>
       <>
         {teamSections.map((section, index) => {
           const filteredMembers = members.filter(
