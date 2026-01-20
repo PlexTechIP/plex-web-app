@@ -70,28 +70,28 @@ const About: React.FC = () => {
                 index % 2 === 0 ? "bg-slate-50" : "bg-white"
               }`}
             >
-              <LeftToRightContent
-                leftChildren={
+        <LeftToRightContent
+          leftChildren={
                   <div>
                     <h3 className="text-xl md:text-2xl font-semibold uppercase tracking-wide text-slate-800">
                       {section.title}
-                    </h3>
+            </h3>
                     <div className="mt-4 space-y-4 text-slate-600 leading-relaxed">
                       {section.description.map((paragraph) => (
                         <p key={paragraph}>{paragraph}</p>
                       ))}
                     </div>
                   </div>
-                }
-                rightChildren={
-                  <Image
+          }
+          rightChildren={
+            <Image
                     src={section.image}
                     alt={section.title}
                     className="rounded-xl border border-slate-200"
                     width={560}
                     height={420}
-                  />
-                }
+            />
+          }
                 styles={index % 2 === 1 ? "lg:[&>*:first-child]:order-2" : ""}
               />
             </div>
@@ -106,13 +106,13 @@ const About: React.FC = () => {
               members navigate the software engineering world and find their own internship opportunities.
             </p>
             <div className="mt-8 rounded-xl border border-slate-200 bg-white p-4">
-              <Image
-                src="/about/destinations.webp"
-                alt="Our Destinations"
+        <Image
+          src="/about/destinations.webp"
+          alt="Our Destinations"
                 className="rounded-lg"
-                width={4880}
-                height={1032}
-              />
+          width={4880}
+          height={1032}
+        />
             </div>
           </div>
         </div>

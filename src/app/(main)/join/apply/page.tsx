@@ -17,7 +17,7 @@ const JoinApply: React.FC = () => {
         <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
           <iframe
             title="PlexTech Application Form"
-            src="https://airtable.com/appNho8H4HsMVRgSU/pagTPYkRUbC2lHdzr/form"
+            src="https://airtable.com/appO26slQbDL1OgXz/pagTPYkRUbC2lHdzr/form"
             className="h-[720px] w-full rounded-lg border border-slate-200"
           />
         </div>

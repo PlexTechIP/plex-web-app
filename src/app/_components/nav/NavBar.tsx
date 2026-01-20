@@ -92,18 +92,18 @@ const NavBar: React.FC = () => {
                   );
                 }
                 return (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    passHref
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  passHref
                     className={
                       isPortal
                         ? "rounded-full border border-orange-400/70 px-4 py-1.5 text-orange-500 hover:bg-orange-50"
                         : "px-2 py-1 text-current hover:text-orange-400"
                     }
-                  >
-                    {item.name}
-                  </Link>
+                >
+                  {item.name}
+                </Link>
                 );
               })}
             </nav>
@@ -168,19 +168,19 @@ const NavBar: React.FC = () => {
                   );
                 }
                 return (
-                  <Link
-                    key={item.name}
-                    href={item.href}
-                    passHref
+                <Link
+                  key={item.name}
+                  href={item.href}
+                  passHref
                     className={
                       isPortal
                         ? "rounded-full border border-orange-400/70 px-4 py-2 text-orange-500 hover:bg-orange-50"
                         : "px-2 py-1 hover:text-orange-400"
                     }
-                    onClick={closeSidebar}
-                  >
-                    {item.name}
-                  </Link>
+                  onClick={closeSidebar}
+                >
+                  {item.name}
+                </Link>
                 );
               })}
             </nav>
