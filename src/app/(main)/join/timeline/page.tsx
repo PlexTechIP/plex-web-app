@@ -29,7 +29,7 @@ const JoinTimeline: React.FC = () => {
       time: "",
       description:
         "Start your journey with PlexTech at our application link! We are recruiting for new curriculum students!",
-      links: [{ text: "Apply Here", href: "https://airtable.com/appO26slQbDL1OgXz/pagTPYkRUbC2lHdzr/form" }],
+      links: [{ text: "Apply Here", href: "https://airtable.com/appNho8H4HsMVRgSU/pagTPYkRUbC2lHdzr/form" }],
     },
     {
       date: "1/27",
@@ -58,7 +58,7 @@ const JoinTimeline: React.FC = () => {
       time: "11:59 PM",
       description:
         "Once you've learned about PlexTech, submit your application here! Our application only consists of three short answer questions and a resume drop. Note that applications are due by midnight, so make sure you don't submit yours late!",
-      links: [{ text: "Apply Here", href: "https://airtable.com/appO26slQbDL1OgXz/pagTPYkRUbC2lHdzr/form" }],
+      links: [{ text: "Apply Here", href: "https://airtable.com/appNho8H4HsMVRgSU/pagTPYkRUbC2lHdzr/form" }],
     },
     {
       date: "1/31-2/1",
