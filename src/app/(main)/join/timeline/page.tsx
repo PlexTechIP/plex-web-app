@@ -86,7 +86,7 @@ const JoinTimeline: React.FC = () => {
       title: "Decisions Released",
       time: "",
       description:
-        "Mark your calendars and keep an eye on your email! Decisions will be released on Tuesday, January 3rd.",
+        "Mark your calendars and keep an eye on your email! Decisions will be released on Tuesday, February 3rd.",
     },
   ];
   const faqs = [
