@@ -9,20 +9,20 @@ const Roles: React.FC = () => {
     {
       image: "/roles/student.webp",
       alt: "Student Icon",
-      title: "Full Stack Course",
+      title: "Curriculum Student",
       content: "No experience necessary! Get your start in software engineering.",
+    },
+    {
+      image: "/roles/developer.webp",
+      alt: "Developer Icon",
+      title: "Developer",
+      content: "Work on a client project team. Contribute to real company projects.",
     },
     {
       image: "/roles/project-manager.webp",
       alt: "Project Manager Icon",
       title: "Project Management",
       content: "Lead a team of developers. Communicate with client representatives.",
-    },
-    {
-      image: "/roles/developer.webp",
-      alt: "Developer Icon",
-      title: "Industry",
-      content: "Work on a client project team. Contribute to real company projects.",
     },
     {
       image: "/roles/executive.webp",
