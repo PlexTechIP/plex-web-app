@@ -35,10 +35,10 @@ const Roles: React.FC = () => {
 
   const newMemberRoles = [
     {
-      title: "Student",
+      title: "Curriculum Student",
       image: "/roles/two-tracks-orange.webp",
       description:
-        "You can join the New Member Education Program with minimal programming experience. Our instructors, who have years of experience, will guide you through the basics of web development in a small, interactive group setting. You will gain plenty of hands-on experience through various projects, fully preparing you to hop onto a client project in your second semester!",
+        "You can join the New Member Education Program (curriculum track) with minimal programming experience. Our instructors, who have years of experience, will guide you through the basics of web development in a small, interactive group setting. You will gain plenty of hands-on experience through various projects, fully preparing you to hop onto a client project in your second semester!",
     },
   ];
 
