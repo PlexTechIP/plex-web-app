@@ -60,20 +60,20 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
               </div>
 
               {/* Back Side */}
-              <div className="flip-card-back flex flex-col justify-between text-center h-full p-10">
-                <div>
-                  <h5 className="font-bold text-xl mb-0">
+              <div className="flip-card-back flex flex-col justify-between text-center h-full p-6">
+                <div className="flex-1 flex flex-col min-h-0">
+                  <h5 className="font-bold text-lg mb-1">
                     {member.firstName + " " + member.lastName}
                   </h5>
-                  <h6 className="text-lg text-gray-700 mb-3">
+                  <h6 className="text-sm text-gray-700 mb-2">
                     {member.position}
                   </h6>
-                  <p className="text-left">
+                  <p className="text-left text-sm leading-relaxed overflow-y-auto flex-1">
                     {member.blurb}
                   </p>
                 </div>
 
-                <ul>
+                <ul className="flex flex-col gap-1.5 mt-3">
                   {member.linkedin && (
                     <li>
                       <Link
@@ -81,9 +81,9 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                         passHref
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2"
+                        className="flex items-center justify-center space-x-1.5 text-sm"
                       >
-                        <FaLinkedinIn />
+                        <FaLinkedinIn className="text-base flex-shrink-0" />
                         <span className="text-blue-500 hover:text-blue-800">LinkedIn</span>
                       </Link>
                     </li>
@@ -95,9 +95,9 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                         passHref
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2"
+                        className="flex items-center justify-center space-x-1.5 text-sm"
                       >
-                        <FaInstagram />
+                        <FaInstagram className="text-base flex-shrink-0" />
                         <span className="text-blue-500 hover:text-blue-800">Instagram</span>
                       </Link>
                     </li>
@@ -109,9 +109,9 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                         passHref
                         target="_blank"
                         rel="noopener noreferrer"
-                        className="flex items-center space-x-2"
+                        className="flex items-center justify-center space-x-1.5 text-sm"
                       >
-                        <BiCoffee />
+                        <BiCoffee className="text-base flex-shrink-0" />
                         <span className="text-blue-500 hover:text-blue-800">Coffee Chat</span>
                       </Link>
                     </li>

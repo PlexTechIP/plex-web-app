@@ -26,6 +26,17 @@ export const fetchMembers = async (): Promise<Member[]> => {
   const data: ApiResponse = await response.json();
 
   const members = data.users.map((user) => {
+    // Helper function to format social media URLs
+    const formatSocialUrl = (username: string | null, baseUrl: string): string | undefined => {
+      if (!username) return undefined;
+      // If already a full URL, return as-is
+      if (username.startsWith('http://') || username.startsWith('https://')) {
+        return username;
+      }
+      // Otherwise, prepend the base URL
+      return `${baseUrl}${username}`;
+    };
+
     return {
       id: user.id,
       firstName: user.first_name,
@@ -33,9 +44,9 @@ export const fetchMembers = async (): Promise<Member[]> => {
       imageUrl: user.image_url ? `${process.env.NEXT_PUBLIC_URL}${user.image_url}` : undefined,
       position: user.current_position || "Unknown",
       blurb: user.profile_blurb || "No blurb available",
-      linkedin: user.linkedin_username || undefined,
-      instagram: user.instagram_username || undefined,
-      calendly: user.calendly_username || undefined,
+      linkedin: formatSocialUrl(user.linkedin_username, 'https://www.linkedin.com/in/'),
+      instagram: formatSocialUrl(user.instagram_username, 'https://www.instagram.com/'),
+      calendly: formatSocialUrl(user.calendly_username, 'https://calendly.com/'),
       currentCompany: user.current_company || undefined,
       bigId: user.big_id || undefined,
     };
