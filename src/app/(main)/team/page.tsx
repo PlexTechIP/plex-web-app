@@ -94,7 +94,7 @@ const Team: React.FC = () => {
         })}
         <ContentSection
           title="Big-Little Tree"
-          isAlternate={true}
+          isAlternate={false}
           bgClassName="bg-slate-50"
         >
           <MemberTree members={members} />
