@@ -52,7 +52,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                           src={imageSrc}
                           alt={`${member.firstName} ${member.lastName}`}
                           fill
-                          className="object-cover group-hover:scale-110 transition-transform duration-500"
+                          className="object-cover object-[center_20%] group-hover:scale-110 transition-transform duration-500"
                           sizes="144px"
                         />
                       </div>
