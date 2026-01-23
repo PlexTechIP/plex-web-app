@@ -108,9 +108,9 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                   </div>
 
                   {/* Blurb with quote styling - flexible height with max */}
-                  <div className="flex-1 mb-4 relative overflow-hidden min-h-0">
-                    <div className="absolute -left-2 top-0 text-3xl text-orange-200 font-serif leading-none">&ldquo;</div>
-                    <div className="pl-4 h-full overflow-y-auto scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
+                  <div className="flex-1 mb-4 relative min-h-0">
+                    <div className="absolute left-0 top-0 text-3xl text-orange-200 font-serif leading-none">&ldquo;</div>
+                    <div className="pl-6 h-full overflow-y-auto overflow-x-hidden scrollbar-thin scrollbar-thumb-gray-300 scrollbar-track-transparent">
                       <p className="text-xs text-gray-700 leading-relaxed italic">
                         {member.blurb}
                       </p>
