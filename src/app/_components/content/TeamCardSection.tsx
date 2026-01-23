@@ -14,6 +14,15 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
   return (
     <div className="flex flex-wrap justify-center gap-8 py-4">
       {members.map((member, index) => {
+        const normalizedFirstName = member.firstName?.trim().toLowerCase();
+        const useShrek =
+          normalizedFirstName === "deleena" || normalizedFirstName === "melody";
+        const imageSrc = useShrek
+          ? "/team/shrek.png"
+          : member.imageUrl
+            ? member.imageUrl
+            : "/team/not-found.jpg";
+
         return (
           <div key={index} className="flip-card w-[300px] group">
             <div className="flip-card-inner">
@@ -40,7 +49,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
 
                       <div className="relative w-36 h-36 rounded-full overflow-hidden ring-4 ring-gray-100 group-hover:ring-white group-hover:scale-105 transition-all duration-300 shadow-lg">
                         <Image
-                          src={member.imageUrl ? member.imageUrl : '/team/not-found.jpg'}
+                          src={imageSrc}
                           alt={`${member.firstName} ${member.lastName}`}
                           fill
                           className="object-cover group-hover:scale-110 transition-transform duration-500"
