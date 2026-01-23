@@ -23,6 +23,10 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
               : member.imageUrl
                 ? member.imageUrl
                 : "/team/not-found.jpg";
+        const imageFitClass =
+          normalizedFirstName === "melody"
+            ? "object-contain"
+            : "object-cover object-[center_20%]";
 
         return (
           <div key={index} className="flip-card w-[300px] group">
@@ -53,7 +57,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                           src={imageSrc}
                           alt={`${member.firstName} ${member.lastName}`}
                           fill
-                          className="object-cover object-[center_20%] group-hover:scale-110 transition-transform duration-500"
+                          className={`${imageFitClass} group-hover:scale-110 transition-transform duration-500`}
                           sizes="144px"
                         />
                       </div>
