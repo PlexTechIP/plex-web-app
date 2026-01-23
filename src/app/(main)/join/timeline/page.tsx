@@ -34,21 +34,21 @@ const JoinTimeline: React.FC = () => {
     {
       date: "1/27",
       title: "Infosession #1",
-      time: "8 PM - 10 PM, Location: Dwinelle 234",
+      time: "8 PM - 10 PM, Location: Hearst Field Annex B1",
       description:
         "Our infosessions are great opportunities to learn more about PlexTech and meet our members! Learn more about the different positions we're recruiting for, the recruitment process, and the great experiences and social events we'll be offering this semester, no matter your experience level.",
     },
     {
       date: "1/28",
       title: "Women in PlexTech Panel",
-      time: "8 PM - 10 PM, Location: Dwinelle 234",
+      time: "8 PM - 10 PM, Location: Hearst Field Annex B5",
       description:
         "PlexTech places a great amount of importance on gender diversity in tech. Join our event to meet the female and non-binary identifying members of our club over complimentary snacks and refreshments.",
     },
     {
       date: "1/29",
       title: "Infosession #2",
-      time: "8 PM - 10 PM, Location: Dwinelle 228",
+      time: "8 PM - 10 PM, Location: Hearst Field Annex B1",
       description:
         "Our infosessions are great opportunities to learn more about PlexTech and meet our members! Learn more about the different positions we're recruiting for, the recruitment process, and the great experiences and social events we'll be offering this semester, no matter your experience level.",
     },
