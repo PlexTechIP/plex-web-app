@@ -100,7 +100,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
 
                   {/* Blurb with quote styling */}
                   <div className="flex-1 mb-6 relative">
-                    <div className="absolute -left-2 top-0 text-4xl text-orange-200 font-serif">"</div>
+                    <div className="absolute -left-2 top-0 text-4xl text-orange-200 font-serif">&ldquo;</div>
                     <p className="text-sm text-gray-700 leading-relaxed pl-4 italic">
                       {member.blurb}
                     </p>
