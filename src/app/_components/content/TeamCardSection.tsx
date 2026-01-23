@@ -15,13 +15,14 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
     <div className="flex flex-wrap justify-center gap-8 py-4">
       {members.map((member, index) => {
         const normalizedFirstName = member.firstName?.trim().toLowerCase();
-        const useShrek =
-          normalizedFirstName === "deleena" || normalizedFirstName === "melody";
-        const imageSrc = useShrek
-          ? "/team/shrek.png"
-          : member.imageUrl
-            ? member.imageUrl
-            : "/team/not-found.jpg";
+        const imageSrc =
+          normalizedFirstName === "deleena"
+            ? "/team/shrek.png"
+            : normalizedFirstName === "melody"
+              ? "/team/melody.jpg"
+              : member.imageUrl
+                ? member.imageUrl
+                : "/team/not-found.jpg";
 
         return (
           <div key={index} className="flip-card w-[300px] group">
