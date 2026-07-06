@@ -24,6 +24,36 @@ const Projects: React.FC = () => {
 
   const portfolio = [
     {
+      image: "/projects/portfolio/aws.webp",
+      title: "Backend + Data Engineering",
+      description:
+        "Built an automatic query acceleration system for OpenSearch Spark using materialized views, with telemetry-driven view selection and query rewriting, plus a maintenance layer supporting skipping indexes, covering indexes, and approximate structures.",
+    },
+    {
+      image: "/projects/portfolio/microsoft.webp",
+      title: "Frontend + Data Engineering",
+      description:
+        "Aggregated published quantum resource estimates into a public portal for side-by-side comparison, normalizing hardware assumptions to surface discrepancies across studies, in partnership with UW's Quantum Department for methodological credibility.",
+    },
+    {
+      image: "/projects/portfolio/lucid.webp",
+      title: "ML + Frontend",
+      description:
+        "Fine-tuned a depth-prediction model to generate dense point clouds from Lucid Motors' monocular camera data, built an evaluation platform with visualization/benchmarking tools, and delivered findings on integrating depth perception into self-driving systems.",
+    },
+    {
+      image: "/projects/portfolio/triton.webp",
+      title: "ML + Hardware",
+      description:
+        "Built a multimodal sensor rig (mmWave radar, thermal, RGB) to collect 10+ hours of people-counting and fall-detection data, and developed lightweight ML pipelines for real-time posture analysis on edge devices.",
+    },
+    {
+      image: "/projects/portfolio/sifive.webp",
+      title: "Backend + Systems",
+      description:
+        "Ran a feasibility study porting Roku's OSS stack from 32-bit ARM to 64-bit RISC-V, cross-compiling ~100 packages and delivering a technical report with findings and recommendations for SiFive.",
+    },
+    {
       image: "/projects/portfolio/zendesk.webp",
       title: "Backend + Frontend",
       description:
