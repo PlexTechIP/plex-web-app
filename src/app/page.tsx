@@ -109,7 +109,7 @@ const Home: React.FC = () => {
       {/* Recruitment Section */}
       <ContentSection
         title="Spring 2026 Recruitment & Applications"
-        summary="We're always looking to add new members to our growing community. We welcome all Berkeley students to apply and join our community, regardless of major or technical experience."
+        summary="We're always looking to add new members to our growing community. We welcome all Berkeley students to apply and join our community, regardless of major or technical experience. Fall 2026 applications close Thursday, September 3 at 11:59 PM PT."
         isAlternate={true}
         bgClassName='bg-gradient-to-br from-[#FF833D] via-[#F06751] via-[#E04867] via-[#B9009B] to-[#A736CE]'
       >
