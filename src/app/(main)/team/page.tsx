@@ -80,7 +80,7 @@ const Team: React.FC = () => {
               section.key.indexOf(a.position) - section.key.indexOf(b.position)
           );;
           const lucas = members.find(
-            (member) => member.firstName.trim().toLowerCase() === "lucas"
+            (member) => member.firstName?.trim().toLowerCase() === "lucas"
           );
           const sectionMembers =
             section.title === "Course Instructors" && lucas && lucas.position !== "Curriculum Instructor"
