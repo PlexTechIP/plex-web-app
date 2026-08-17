@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Image from 'next/image';
 import Link from "next/link";
 import { BiCoffee } from "react-icons/bi";
@@ -9,6 +9,37 @@ import './TeamCardSection.css';
 interface TeamCardSectionProps {
   members: Member[];
 }
+
+interface ProfileImageProps {
+  src: string;
+  alt: string;
+  className: string;
+}
+
+const FALLBACK_IMAGE = "/team/not-found.jpg";
+
+const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, className }) => {
+  const [imageSrc, setImageSrc] = useState(src);
+
+  useEffect(() => {
+    setImageSrc(src);
+  }, [src]);
+
+  return (
+    <Image
+      src={imageSrc}
+      alt={alt}
+      fill
+      className={className}
+      sizes="144px"
+      onError={() => {
+        if (imageSrc !== FALLBACK_IMAGE) {
+          setImageSrc(FALLBACK_IMAGE);
+        }
+      }}
+    />
+  );
+};
 
 const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
   return (
@@ -22,7 +53,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
               ? "/team/melody.jpg"
               : member.imageUrl
                 ? member.imageUrl
-                : "/team/not-found.jpg";
+                : FALLBACK_IMAGE;
         const imageFitClass =
           normalizedFirstName === "melody"
             ? "object-contain"
@@ -53,12 +84,10 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                       <div className="absolute inset-0 rounded-full bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600 opacity-0 group-hover:opacity-100 blur-md group-hover:animate-pulse transition-opacity"></div>
 
                       <div className="relative w-36 h-36 rounded-full overflow-hidden ring-4 ring-gray-100 group-hover:ring-white group-hover:scale-105 transition-all duration-300 shadow-lg">
-                        <Image
+                        <ProfileImage
                           src={imageSrc}
                           alt={`${member.firstName} ${member.lastName}`}
-                          fill
                           className={`${imageFitClass} group-hover:scale-110 transition-transform duration-500`}
-                          sizes="144px"
                         />
                       </div>
                     </div>
