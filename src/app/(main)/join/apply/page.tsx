@@ -20,6 +20,16 @@ const JoinApply: React.FC = () => {
             src="https://main.d3r0mhpqy3oqvn.amplifyapp.com/apply"
             className="h-[700px] w-full rounded-lg border border-slate-200"
           />
+          <div className="mt-4 text-center">
+            <a
+              href="https://main.d3r0mhpqy3oqvn.amplifyapp.com/apply"
+              target="_blank"
+              rel="noreferrer"
+              className="text-orange-600 underline hover:text-orange-700"
+            >
+              Open the application in a new tab
+            </a>
+          </div>
         </div>
       </ContentSection>
     </main>
