@@ -12,7 +12,7 @@ const JoinApply: React.FC = () => {
       />
       <ContentSection title="Application Form" isAlternate={false}>
         <div className="mb-4 rounded-lg border border-orange-200 bg-orange-50 px-4 py-3 text-sm text-orange-900">
-        Applications are due January 29, 2026 at 11:59 PM.
+        Applications close Thursday, September 3 at 11:59 PM PT.
         </div>
         <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
           <div className="mb-2 flex justify-end">
