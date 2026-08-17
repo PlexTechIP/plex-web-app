@@ -42,9 +42,25 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, className }) => {
 };
 
 const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
+  const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
+
+  const toggleCard = (memberId: string) => {
+    setFlippedCards((current) => {
+      const next = new Set(current);
+      if (next.has(memberId)) {
+        next.delete(memberId);
+      } else {
+        next.add(memberId);
+      }
+      return next;
+    });
+  };
+
   return (
     <div className="flex flex-wrap justify-center gap-8 py-4">
       {members.map((member, index) => {
+        const cardId = member.id || `${member.firstName}-${member.lastName}-${index}`;
+        const isFlipped = flippedCards.has(cardId);
         const normalizedFirstName = member.firstName?.trim().toLowerCase();
         const imageSrc =
           normalizedFirstName === "deleena"
@@ -60,7 +76,21 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
             : "object-cover object-[center_20%]";
 
         return (
-          <div key={index} className="flip-card w-[300px] group">
+          <div
+            key={cardId}
+            className={`flip-card w-[300px] group ${isFlipped ? "is-flipped" : ""}`}
+            role="button"
+            tabIndex={0}
+            aria-pressed={isFlipped}
+            aria-label={`${isFlipped ? "Hide" : "Show"} more information about ${member.firstName} ${member.lastName}`}
+            onClick={() => toggleCard(cardId)}
+            onKeyDown={(event) => {
+              if (event.key === "Enter" || event.key === " ") {
+                event.preventDefault();
+                toggleCard(cardId);
+              }
+            }}
+          >
             <div className="flip-card-inner">
               {/* Front Side */}
               <div className="flip-card-front bg-white overflow-hidden relative">
@@ -110,10 +140,10 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                     )}
                   </div>
 
-                  {/* Hover hint with animation */}
+                  {/* Click hint */}
                   <div className="absolute bottom-6 left-0 right-0 flex justify-center">
                     <div className="text-xs text-gray-400 font-medium tracking-wide uppercase group-hover:text-orange-500 transition-colors">
-                      Hover for more info
+                      Click for more info
                     </div>
                   </div>
                 </div>
@@ -157,6 +187,8 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                         href={`${member.linkedin}`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(event) => event.stopPropagation()}
+                        onKeyDown={(event) => event.stopPropagation()}
                         className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white border-2 border-gray-200 hover:border-blue-400 hover:bg-gradient-to-r hover:from-blue-50 hover:to-blue-100/50 transition-all duration-300 group/link hover:shadow-md"
                       >
                         <div className="w-7 h-7 rounded-lg bg-blue-100 flex items-center justify-center group-hover/link:bg-blue-500 transition-colors flex-shrink-0">
@@ -173,6 +205,8 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                         href={`${member.instagram}`}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(event) => event.stopPropagation()}
+                        onKeyDown={(event) => event.stopPropagation()}
                         className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white border-2 border-gray-200 hover:border-pink-400 hover:bg-gradient-to-r hover:from-pink-50 hover:to-pink-100/50 transition-all duration-300 group/link hover:shadow-md"
                       >
                         <div className="w-7 h-7 rounded-lg bg-pink-100 flex items-center justify-center group-hover/link:bg-gradient-to-br group-hover/link:from-pink-500 group-hover/link:to-purple-500 transition-all flex-shrink-0">
@@ -189,6 +223,8 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                         href={member.calendly}
                         target="_blank"
                         rel="noopener noreferrer"
+                        onClick={(event) => event.stopPropagation()}
+                        onKeyDown={(event) => event.stopPropagation()}
                         className="flex items-center gap-2 px-3 py-2 rounded-xl bg-white border-2 border-gray-200 hover:border-orange-400 hover:bg-gradient-to-r hover:from-orange-50 hover:to-orange-100/50 transition-all duration-300 group/link hover:shadow-md"
                       >
                         <div className="w-7 h-7 rounded-lg bg-orange-100 flex items-center justify-center group-hover/link:bg-orange-500 transition-colors flex-shrink-0">

@@ -21,13 +21,13 @@ const Team: React.FC = () => {
     {
       title: "Course Instructors",
       description:
-        "Our Project Managers and Course Instructors are key leaders within PlexTech, serving as the main touchpoint for our new students. They are heavily involved in planning projects and teaching software engineering concepts. They also are responsible for creating a tight-knit community aspect within their teams to give students another community within the club.",
+        "Our Course Instructors guide new members through PlexTech's curriculum, teaching core software engineering concepts through hands-on lessons and technical support. They create an approachable learning environment that helps every student build the skills and confidence needed to contribute to a project team.",
       key: ["Curriculum Instructor"],
     },
     {
       title: "Project Managers",
       description:
-        "Our Project Managers are key leaders within PlexTech, serving as the main touchpoint for our new members and developers. They are heavily involved in planning projects and teaching software engineering concepts. They also are responsible for creating a tight-knit community aspect within their teams to give students another community within the club.",
+        "Our Project Managers lead teams through the full project lifecycle, translating client needs into clear technical plans and keeping development on track. They mentor developers, coordinate with clients, and build collaborative teams that deliver thoughtful, high-quality products.",
       key: ["Project Manager"],
     },
     {

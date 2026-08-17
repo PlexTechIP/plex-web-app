@@ -17,9 +17,15 @@
   min-height: 420px;
 }
 
-/* Enhanced shadow on hover */
-.flip-card:hover .flip-card-inner {
+/* Flip only after an explicit click or keyboard activation. */
+.flip-card.is-flipped .flip-card-inner {
   transform: rotateY(180deg);
+}
+
+.flip-card:focus-visible {
+  outline: 3px solid rgba(251, 146, 60, 0.55);
+  outline-offset: 4px;
+  border-radius: 18px;
 }
 
 /* Position the front and back side */
