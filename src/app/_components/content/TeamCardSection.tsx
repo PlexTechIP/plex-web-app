@@ -43,6 +43,9 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, className }) => {
 
 const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
   const [flippedCards, setFlippedCards] = useState<Set<string>>(new Set());
+  const visibleMembers = members.filter(
+    (member) => member.firstName?.trim() && member.lastName?.trim()
+  );
 
   const toggleCard = (memberId: string) => {
     setFlippedCards((current) => {
@@ -58,7 +61,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
 
   return (
     <div className="flex flex-wrap justify-center gap-8 py-4">
-      {members.map((member, index) => {
+      {visibleMembers.map((member, index) => {
         const cardId = member.id || `${member.firstName}-${member.lastName}-${index}`;
         const isFlipped = flippedCards.has(cardId);
         const normalizedFirstName = member.firstName?.trim().toLowerCase();
