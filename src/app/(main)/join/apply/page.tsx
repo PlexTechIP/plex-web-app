@@ -15,21 +15,21 @@ const JoinApply: React.FC = () => {
         Applications are due January 29, 2026 at 11:59 PM.
         </div>
         <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <div className="mb-4 flex justify-center">
+            <a
+              href="https://main.d3r0mhpqy3oqvn.amplifyapp.com/apply"
+              target="_blank"
+              rel="noreferrer"
+              className="rounded-xl bg-orange-500 px-6 py-3 text-lg font-semibold text-white transition hover:bg-orange-600"
+            >
+              Open the application in a new tab
+            </a>
+          </div>
           <iframe
             title="PlexTech Application Form"
             src="https://main.d3r0mhpqy3oqvn.amplifyapp.com/apply"
             className="h-[700px] w-full rounded-lg border border-slate-200"
           />
-          <div className="mt-4 text-center">
-            <a
-              href="https://main.d3r0mhpqy3oqvn.amplifyapp.com/apply"
-              target="_blank"
-              rel="noreferrer"
-              className="text-orange-600 underline hover:text-orange-700"
-            >
-              Open the application in a new tab
-            </a>
-          </div>
         </div>
       </ContentSection>
     </main>
