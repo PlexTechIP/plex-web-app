@@ -79,6 +79,20 @@ const Team: React.FC = () => {
             (a, b) =>
               section.key.indexOf(a.position) - section.key.indexOf(b.position)
           );;
+          const lucas = members.find(
+            (member) => member.firstName.trim().toLowerCase() === "lucas"
+          );
+          const sectionMembers =
+            section.title === "Course Instructors" && lucas && lucas.position !== "Curriculum Instructor"
+              ? [
+                  ...filteredMembers,
+                  {
+                    ...lucas,
+                    id: `${lucas.id}-curriculum-instructor`,
+                    position: "Curriculum Instructor",
+                  },
+                ]
+              : filteredMembers;
 
           return (
             <ContentSection
@@ -88,7 +102,7 @@ const Team: React.FC = () => {
               isAlternate={false}
               bgClassName={index % 2 === 0 ? "bg-slate-50" : "bg-white"}
             >
-              <TeamCardSection members={filteredMembers} />
+              <TeamCardSection members={sectionMembers} />
             </ContentSection>
           );
         })}
