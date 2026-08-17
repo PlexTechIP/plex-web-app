@@ -66,7 +66,7 @@ const Team: React.FC = () => {
   return (
     <main>
       <HeroSection
-        backgroundImage="team/team-bg.webp"
+        backgroundImage="team/team-bg.jpg"
         title="Our Team"
         subtitle="Meet the #PlexFam"
         center={false}
