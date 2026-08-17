@@ -15,14 +15,14 @@ const JoinApply: React.FC = () => {
         Applications are due January 29, 2026 at 11:59 PM.
         </div>
         <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
-          <div className="mb-4 flex justify-center">
+          <div className="mb-2 flex justify-end">
             <a
               href="https://main.d3r0mhpqy3oqvn.amplifyapp.com/apply"
               target="_blank"
               rel="noreferrer"
-              className="rounded-xl bg-orange-500 px-6 py-3 text-lg font-semibold text-white transition hover:bg-orange-600"
+              className="text-xs font-medium text-orange-600 underline-offset-2 transition hover:text-orange-700 hover:underline"
             >
-              Open the application in a new tab
+              Open in new tab ↗
             </a>
           </div>
           <iframe
