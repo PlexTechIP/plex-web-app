@@ -31,6 +31,11 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, className }) => {
       alt={alt}
       fill
       className={className}
+      // Cards are rendered inside a large, transformed tree and many are
+      // below the mobile viewport. Native lazy-loading can leave those
+      // images pending indefinitely, so load each uploaded profile photo
+      // eagerly to keep the full team visible while scrolling.
+      loading="eager"
       sizes="144px"
       onError={() => {
         if (imageSrc !== FALLBACK_IMAGE) {
