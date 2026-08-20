@@ -27,7 +27,7 @@ const JoinTimeline: React.FC = () => {
         "Stressed about club recruitment? Clubs and Cookies is an ambitious crossover event of a diverse set of technical student organizations at UC Berkeley. Join us to learn about web development, machine learning, data science, and more, and have your questions answered by our group of experienced panelists.",
     },
     {
-      date: "TBD",
+      date: "8/26",
       title: "Applications Released!",
       time: "",
       description:
@@ -64,7 +64,7 @@ const JoinTimeline: React.FC = () => {
       links: [{ text: "Apply Here", href: "/join/apply" }],
     },
     {
-      date: "TBD",
+      date: "9/5 - 9/6",
       title: "Technical Interviews",
       time: "(Invite Only)",
       description:
