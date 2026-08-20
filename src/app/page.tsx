@@ -4,6 +4,7 @@ import ContentSection from './_components/content/ContentSection';
 import LinkButton from './_components/button/LinkButton';
 import HeroSection from './_components/hero/HeroSection';
 import LeftToRightContent from './_components/content/LeftToRightContent';
+import AnimatedStat from './_components/content/AnimatedStat';
 import { Carousel } from '@/components/Carousel/Carousel';
 
 const Home: React.FC = () => {
@@ -24,9 +25,9 @@ const Home: React.FC = () => {
 
   // TODO: Update values
   const stats = [
-    { value: 12, label: 'Semesters of Experience' },
-    { value: 33, label: 'Projects Completed' },
-    { value: 50, label: 'Active Members' },
+    { value: 13, label: 'Semesters of Experience' },
+    { value: 41, label: 'Projects Completed' },
+    { value: 45, label: 'Active Members' },
   ];
 
   return (
@@ -92,7 +93,7 @@ const Home: React.FC = () => {
             <div key={index} className="text-center font-semibold rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm">
               <div className="flex justify-center">
                 <div className="text-orange-500 text-4xl md:text-5xl font-bold">
-                  {stat.value}
+                  <AnimatedStat value={stat.value} />
                 </div>
               </div>
               <div className="text-lg md:text-xl mt-5 text-slate-600">
