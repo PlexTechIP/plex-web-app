@@ -11,9 +11,23 @@ const JoinApply: React.FC = () => {
         center={false}
       />
       <ContentSection title="Application Form" isAlternate={false}>
-        <div className="rounded-xl border border-orange-200 bg-orange-50 px-6 py-10 text-center text-orange-900">
-          <h2 className="mb-2 text-xl font-semibold">Applications are temporarily closed</h2>
-          <p className="text-sm">Please check back soon for the Fall 2026 application.</p>
+        <div className="mb-4 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
+          If the application does not load below, please use the direct link:
+          <a
+            href="https://plextech-application-portal.vercel.app/apply"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="ml-1 font-semibold text-orange-600 underline"
+          >
+            Open Application Portal
+          </a>
+        </div>
+        <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
+          <iframe
+            title="PlexTech Application Portal"
+            src="https://plextech-application-portal.vercel.app/apply"
+            className="h-[820px] w-full rounded-lg border border-slate-200"
+          />
         </div>
       </ContentSection>
     </main>

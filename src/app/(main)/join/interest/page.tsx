@@ -14,7 +14,7 @@ const JoinInterest: React.FC = () => {
         <div className="mb-4 rounded-lg border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-700">
           If the form does not load below, please use the direct link:
           <a
-            href="https://forms.gle/JxS8GykwzZCZoSKTA"
+            href="https://docs.google.com/forms/d/e/1FAIpQLSehh1-ECRXsORzpCRfb06kKxURReLC6Rw_q5n46RGLXUrrYxQ/viewform?usp=dialog"
             target="_blank"
             rel="noopener noreferrer"
             className="ml-1 font-semibold text-orange-600 underline"
@@ -25,7 +25,7 @@ const JoinInterest: React.FC = () => {
         <div className="rounded-xl border border-slate-200 bg-white p-4 shadow-sm">
           <iframe
             title="PlexTech Interest Form"
-            src="https://forms.gle/JxS8GykwzZCZoSKTA"
+            src="https://docs.google.com/forms/d/e/1FAIpQLSehh1-ECRXsORzpCRfb06kKxURReLC6Rw_q5n46RGLXUrrYxQ/viewform?usp=dialog"
             className="h-[720px] w-full rounded-lg border border-slate-200"
           />
         </div>
@@ -35,4 +35,3 @@ const JoinInterest: React.FC = () => {
 };
 
 export default JoinInterest;
-
