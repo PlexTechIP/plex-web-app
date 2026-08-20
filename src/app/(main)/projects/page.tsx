@@ -48,6 +48,12 @@ const Projects: React.FC = () => {
         "Developed a fully trained NLP model that has been deployed / hosted on AWS EC2; currently, groups 1000+ issues a day on Jira to save time for end users.",
     },
     {
+      image: "/projects/portfolio/triton.webp",
+      title: "ML + Hardware",
+      description:
+        "Built a multimodal sensor rig (mmWave radar, thermal, RGB) to collect 10+ hours of people-counting and fall-detection data, and developed lightweight ML pipelines for real-time posture analysis on edge devices.",
+    },
+    {
       image: "/projects/portfolio/sifive.webp",
       title: "Backend + Systems",
       description:
@@ -58,12 +64,6 @@ const Projects: React.FC = () => {
       title: "Backend + Frontend",
       description:
         "Developed a microservice with a frontend to configure SLA policies and a backend to facilitate requests and send notifications; unit tests to validate interactions between the two components. Notifies 1,000,000+ SLA requests per day.",
-    },
-    {
-      image: "/projects/portfolio/triton.webp",
-      title: "ML + Hardware",
-      description:
-        "Built a multimodal sensor rig (mmWave radar, thermal, RGB) to collect 10+ hours of people-counting and fall-detection data, and developed lightweight ML pipelines for real-time posture analysis on edge devices.",
     },
     {
       image: "/projects/portfolio/flexcar.webp",
