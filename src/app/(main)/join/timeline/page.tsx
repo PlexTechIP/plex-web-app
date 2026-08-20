@@ -78,7 +78,7 @@ const JoinTimeline: React.FC = () => {
         "For those who make it past the written application review, congratulations! Applicants who move to forward stages will be invited to attend our recruitment social for a low stakes event to get to know PlexTech more intimately.",
     },
     {
-      date: "TBD",
+      date: "9/8",
       title: "Behavioral Interviews",
       time: "(Invite Only)",
       description:
