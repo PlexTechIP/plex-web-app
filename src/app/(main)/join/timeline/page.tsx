@@ -13,7 +13,10 @@ const JoinTimeline: React.FC = () => {
         "Tabling is a great chance to meet members of PlexTech and learn more about our recruitment process. We will host in-person tabling at Memorial Glade and Upper Sproul. We also encourage you to sign up for 1-1 coffee chats with our exec members and fill out our interest form to keep updated with our recruitment events!",
       links: [
         { text: "Calendly Links", href: "/team" },
-        { text: "Interest Form", href: "https://forms.gle/JxS8GykwzZCZoSKTA" },
+        {
+          text: "Interest Form",
+          href: "https://docs.google.com/forms/d/e/1FAIpQLSehh1-ECRXsORzpCRfb06kKxURReLC6Rw_q5n46RGLXUrrYxQ/viewform?usp=dialog",
+        },
       ],
     },
     {
