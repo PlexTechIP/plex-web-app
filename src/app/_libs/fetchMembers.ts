@@ -24,8 +24,6 @@ export const fetchMembers = async (): Promise<Member[]> => {
   }
 
   const data: ApiResponse = await response.json();
-  const apiBaseUrl = process.env.NEXT_PUBLIC_URL ?? "";
-
   const members = data.users.map((user) => {
     // Helper function to format social media URLs
     const formatSocialUrl = (username: string | null, baseUrl: string): string | undefined => {
@@ -42,12 +40,10 @@ export const fetchMembers = async (): Promise<Member[]> => {
       id: user.id,
       firstName: user.first_name,
       lastName: user.last_name,
-      // Serve uploaded photos through the member-portal endpoint instead of
-      // the static directory. The endpoint reads the same DB-backed file and
-      // sends no-cache headers, so a reload always sees the latest upload.
-      imageUrl: user.image_url
-        ? `${apiBaseUrl}/member-portal-api/profile/image/${encodeURIComponent(user.id)}`
-        : undefined,
+      // Keep the static file server as the primary path for efficient bulk
+      // loading. TeamCardSection retries through the no-cache member-portal
+      // endpoint if an individual static request fails.
+      imageUrl: user.image_url ? `${process.env.NEXT_PUBLIC_URL}${user.image_url}` : undefined,
       position: user.current_position || "Unknown",
       blurb: user.profile_blurb || "No blurb available",
       linkedin: formatSocialUrl(user.linkedin_username, 'https://www.linkedin.com/in/'),

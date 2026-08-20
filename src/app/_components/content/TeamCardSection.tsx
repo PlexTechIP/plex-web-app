@@ -14,16 +14,17 @@ interface ProfileImageProps {
   src: string;
   alt: string;
   className: string;
+  retrySrc?: string;
 }
 
 const FALLBACK_IMAGE = "/team/not-found.jpg";
 
-const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, className }) => {
+const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, className, retrySrc }) => {
   const [imageSrc, setImageSrc] = useState(src);
 
   useEffect(() => {
     setImageSrc(src);
-  }, [src]);
+  }, [src, retrySrc]);
 
   return (
     <Image
@@ -38,6 +39,10 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, className }) => {
       loading="eager"
       sizes="144px"
       onError={() => {
+        if (retrySrc && imageSrc === src) {
+          setImageSrc(retrySrc);
+          return;
+        }
         if (imageSrc !== FALLBACK_IMAGE) {
           setImageSrc(FALLBACK_IMAGE);
         }
@@ -78,6 +83,10 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
               : member.imageUrl
                 ? member.imageUrl
                 : FALLBACK_IMAGE;
+        const retryImageSrc =
+          member.imageUrl && member.id
+            ? `${process.env.NEXT_PUBLIC_URL}/member-portal-api/profile/image/${encodeURIComponent(member.id)}`
+            : undefined;
         const imageFitClass =
           normalizedFirstName === "melody"
             ? "object-contain"
@@ -124,6 +133,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                       <div className="relative w-36 h-36 rounded-full overflow-hidden ring-4 ring-gray-100 group-hover:ring-white group-hover:scale-105 transition-all duration-300 shadow-lg">
                         <ProfileImage
                           src={imageSrc}
+                          retrySrc={retryImageSrc}
                           alt={`${member.firstName} ${member.lastName}`}
                           className={`${imageFitClass} group-hover:scale-110 transition-transform duration-500`}
                         />
