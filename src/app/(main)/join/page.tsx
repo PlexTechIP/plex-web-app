@@ -25,7 +25,7 @@ const Join: React.FC = () => {
     <main>
       <HeroSection
         backgroundImage="/join/join-bg.webp"
-        title="Spring 2026 Recruitment"
+        title="Fall 2026 Recruitment"
         subtitle="Recruitment information and application resources"
         center={false}
       >
