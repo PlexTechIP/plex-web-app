@@ -42,6 +42,12 @@ const Projects: React.FC = () => {
         "Fine-tuned a depth-prediction model to generate dense point clouds from Lucid Motors' monocular camera data, built an evaluation platform with visualization/benchmarking tools, and delivered findings on integrating depth perception into self-driving systems.",
     },
     {
+      image: "/projects/portfolio/atlassian.webp",
+      title: "NLP + Frontend",
+      description:
+        "Developed a fully trained NLP model that has been deployed / hosted on AWS EC2; currently, groups 1000+ issues a day on Jira to save time for end users.",
+    },
+    {
       image: "/projects/portfolio/sifive.webp",
       title: "Backend + Systems",
       description:
