@@ -42,12 +42,6 @@ const Projects: React.FC = () => {
         "Fine-tuned a depth-prediction model to generate dense point clouds from Lucid Motors' monocular camera data, built an evaluation platform with visualization/benchmarking tools, and delivered findings on integrating depth perception into self-driving systems.",
     },
     {
-      image: "/projects/portfolio/triton.webp",
-      title: "ML + Hardware",
-      description:
-        "Built a multimodal sensor rig (mmWave radar, thermal, RGB) to collect 10+ hours of people-counting and fall-detection data, and developed lightweight ML pipelines for real-time posture analysis on edge devices.",
-    },
-    {
       image: "/projects/portfolio/sifive.webp",
       title: "Backend + Systems",
       description:
@@ -60,10 +54,10 @@ const Projects: React.FC = () => {
         "Developed a microservice with a frontend to configure SLA policies and a backend to facilitate requests and send notifications; unit tests to validate interactions between the two components. Notifies 1,000,000+ SLA requests per day.",
     },
     {
-      image: "/projects/portfolio/atlassian.webp",
-      title: "NLP + Frontend",
+      image: "/projects/portfolio/triton.webp",
+      title: "ML + Hardware",
       description:
-        "Developed a fully trained NLP model that has been deployed / hosted on AWS EC2; currently, groups 1000+ issues a day on Jira to save time for end users.",
+        "Built a multimodal sensor rig (mmWave radar, thermal, RGB) to collect 10+ hours of people-counting and fall-detection data, and developed lightweight ML pipelines for real-time posture analysis on edge devices.",
     },
     {
       image: "/projects/portfolio/flexcar.webp",
