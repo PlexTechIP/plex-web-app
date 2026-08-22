@@ -16,13 +16,11 @@ const LinkButton: React.FC<LinkButtonProps> = ({
 
   return (
     <div className="flex justify-center">
-      <Link href={href} passHref>
-        <button
-          type="button"
-          className={`btn btn-secondary px-6 py-2 text-xl rounded-xl transition-all duration-200 shadow-md hover:-translate-y-0.5 hover:bg-orange-600 hover:text-white hover:shadow-lg active:translate-y-0 ${styles}`}
-        >
-          {innerText}
-        </button>
+      <Link
+        href={href}
+        className={`inline-flex min-h-11 items-center justify-center rounded-xl px-6 py-2.5 text-base font-semibold shadow-sm transition-all duration-200 hover:-translate-y-0.5 hover:bg-orange-600 hover:text-white hover:shadow-md focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-orange-500 focus-visible:ring-offset-2 active:translate-y-0 ${styles}`}
+      >
+        {innerText}
       </Link>
     </div>
   );

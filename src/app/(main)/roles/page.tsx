@@ -74,11 +74,12 @@ const Roles: React.FC = () => {
         isAlternate={false}
       >
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {pipelineRoles.map((role, index) => (
+          {pipelineRoles.map((role) => (
             <div
-              key={index}
-              className="flex flex-col items-center text-center rounded-xl border border-slate-200 bg-white/90 p-5 shadow-sm"
+              key={role.title}
+              className="group relative flex flex-col items-center overflow-hidden rounded-2xl border border-slate-200 bg-white p-5 text-center shadow-sm transition-all duration-300 hover:-translate-y-1 hover:border-orange-200 hover:shadow-lg"
             >
+              <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600" />
               <Image src={role.image} alt={role.alt} width={120} height={120} className="object-contain"/>
               <h4 className="mt-4 font-semibold text-lg text-slate-900">{role.title}</h4>
               <p className="mt-2 text-sm text-slate-600">{role.content}</p>
@@ -106,7 +107,7 @@ const Roles: React.FC = () => {
         <CardSection cards={newMemberRoles} />
 
         <div className='mt-8'>
-          <LinkButton href='/join/apply' isAlternate={true} innerText='Apply to be a new member!' />
+          <LinkButton href='/join/apply' isAlternate={false} innerText='Apply to be a new member!' />
         </div>
       </ContentSection>
 

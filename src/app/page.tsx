@@ -89,8 +89,9 @@ const Home: React.FC = () => {
         />
         {/* Statistics Section */}
         <div className="grid grid-cols-1 md:grid-cols-3 w-full gap-8 mt-6">
-          {stats.map((stat, index) => (
-            <div key={index} className="text-center font-semibold rounded-2xl border border-slate-200 bg-white/90 p-6 shadow-sm">
+          {stats.map((stat) => (
+            <div key={stat.label} className="relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-6 text-center font-semibold shadow-sm">
+              <div className="absolute inset-x-0 top-0 h-1.5 bg-gradient-to-r from-orange-400 via-pink-500 to-purple-600" />
               <div className="flex justify-center">
                 <div className="text-orange-500 text-4xl md:text-5xl font-bold">
                   <AnimatedStat value={stat.value} />

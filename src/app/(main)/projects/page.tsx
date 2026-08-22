@@ -179,7 +179,7 @@ const Projects: React.FC = () => {
       {/* Testimonials Section */}
       <ContentSection
         title="Here's What Our Clients Have To Say"
-        isAlternate={true}
+        isAlternate={false}
       >
         <DividedTextCarousel content={testimonials} />
       </ContentSection>
@@ -191,7 +191,7 @@ const Projects: React.FC = () => {
           We welcome all Berkeley students, regardless of technical experience, with a role to fit your social and professional goals."
         isAlternate={false}
       >
-        <div className="bg-white/90 p-6 md:p-8 border border-slate-200 rounded-xl shadow-sm">
+        <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-sm md:p-8">
           <Form
             action="https://formspree.io/xayoeqwa"
             className="space-y-6"

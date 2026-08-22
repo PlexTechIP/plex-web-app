@@ -43,7 +43,7 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
 
   return (
     <div className="max-w-[500px] mx-auto">
-      <div className="overflow-hidden" ref={emblaRef}>
+      <div className="overflow-hidden rounded-2xl border border-slate-200 bg-white p-2 shadow-sm" ref={emblaRef}>
         <div className="flex">
           {images.map((src, index) => (
             <div
@@ -53,10 +53,10 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
             >
               <Image
                 src={src}
-                alt={`Carousel Image ${index}`}
+                alt={`PlexTech gallery image ${index + 1}`}
                 width={500}
                 height={384}
-                className="object-contain"
+                className="h-full w-full rounded-xl object-contain"
                 sizes="(max-width: 500px) 100vw, 500px"
               />
             </div>
@@ -67,7 +67,9 @@ export const Carousel: React.FC<CarouselProps> = ({ images }) => {
         {images.map((_, index) => (
           <button
             key={index}
-            className={`w-3 h-3 rounded-full mx-1 ${index === selectedIndex ? "bg-orange-500" : "bg-gray-300"
+            type="button"
+            aria-label={`Go to image ${index + 1}`}
+            className={`h-2.5 w-2.5 rounded-full mx-1 transition-colors ${index === selectedIndex ? "bg-orange-500" : "bg-slate-300 hover:bg-slate-400"
               }`}
             onClick={() => scrollTo(index)}
           />
