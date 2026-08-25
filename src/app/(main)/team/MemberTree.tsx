@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import Tree, { CustomNodeElementProps, TreeNodeDatum } from "react-d3-tree";
 import { Member } from "@/app/_types/Member";
 
-const FALLBACK_IMAGE = "/team/not-found.jpg";
+const FALLBACK_IMAGE = "/plextech-logo.webp";
 
 interface ExtendedTreeNodeDatum extends TreeNodeDatum {
   memberId?: string;
@@ -134,10 +134,11 @@ const renderTreeNode = ({ nodeDatum }: CustomNodeElementProps, focusedMemberId: 
         y={-31}
         width={62}
         height={62}
-        preserveAspectRatio="xMidYMid slice"
+        preserveAspectRatio={node.imageUrl ? "xMidYMid slice" : "xMidYMid meet"}
         clipPath="circle(31px at center)"
         onError={(event) => {
           event.currentTarget.setAttribute("href", FALLBACK_IMAGE);
+          event.currentTarget.setAttribute("preserveAspectRatio", "xMidYMid meet");
         }}
       />
       <rect

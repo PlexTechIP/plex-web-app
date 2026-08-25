@@ -18,7 +18,7 @@ interface ProfileImageProps {
   loading?: "eager" | "lazy";
 }
 
-const FALLBACK_IMAGE = "/team/not-found.jpg";
+const FALLBACK_IMAGE = "/plextech-logo.webp";
 
 const ProfileImage: React.FC<ProfileImageProps> = ({
   src,
@@ -38,7 +38,11 @@ const ProfileImage: React.FC<ProfileImageProps> = ({
       src={imageSrc}
       alt={alt}
       fill
-      className={className}
+      className={`${className} ${
+        imageSrc === FALLBACK_IMAGE
+          ? "object-contain bg-white p-5"
+          : "object-cover object-[center_20%]"
+      }`}
       loading={loading}
       sizes="144px"
       onError={() => {
@@ -82,8 +86,6 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
           member.imageUrl && member.id
             ? `${process.env.NEXT_PUBLIC_URL}/member-portal-api/profile/image/${encodeURIComponent(member.id)}`
             : undefined;
-        const imageFitClass = "object-cover object-[center_20%]";
-
         return (
           <div
             key={cardId}
@@ -127,7 +129,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                           src={imageSrc}
                           retrySrc={retryImageSrc}
                           alt={`${member.firstName} ${member.lastName}`}
-                          className={`${imageFitClass} group-hover:scale-110 transition-transform duration-500`}
+                          className="group-hover:scale-110 transition-transform duration-500"
                           loading={member.position === "Alumni" ? "lazy" : "eager"}
                         />
                       </div>
