@@ -23,9 +23,13 @@ const ContentSection: React.FC<ContentSectionProps> = ({
 
   return (
     <section
-      className={`py-14 md:py-16 ${appliedBgClass} ${textColor}`}
+      className={`relative isolate overflow-hidden py-14 md:py-16 ${appliedBgClass} ${textColor}`}
     >
-      <div className="container mx-auto px-6">
+      <div
+        aria-hidden="true"
+        className="pointer-events-none absolute inset-0 z-0 bg-[url('/shapes-bg.webp')] bg-[length:1200px_auto] bg-center bg-repeat opacity-30 mix-blend-multiply"
+      />
+      <div className="relative z-10 container mx-auto px-6">
         <div className="mb-8 text-center max-w-3xl mx-auto">
           <h2 className="text-3xl md:text-4xl font-semibold tracking-tight">{title}</h2>
           <div className={`mx-auto my-4 h-1 w-16 rounded-full ${highlightColor}`} />

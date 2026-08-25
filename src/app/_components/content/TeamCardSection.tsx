@@ -15,11 +15,18 @@ interface ProfileImageProps {
   alt: string;
   className: string;
   retrySrc?: string;
+  loading?: "eager" | "lazy";
 }
 
 const FALLBACK_IMAGE = "/team/not-found.jpg";
 
-const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, className, retrySrc }) => {
+const ProfileImage: React.FC<ProfileImageProps> = ({
+  src,
+  alt,
+  className,
+  retrySrc,
+  loading = "eager",
+}) => {
   const [imageSrc, setImageSrc] = useState(src);
 
   useEffect(() => {
@@ -32,11 +39,7 @@ const ProfileImage: React.FC<ProfileImageProps> = ({ src, alt, className, retryS
       alt={alt}
       fill
       className={className}
-      // Cards are rendered inside a large, transformed tree and many are
-      // below the mobile viewport. Native lazy-loading can leave those
-      // images pending indefinitely, so load each uploaded profile photo
-      // eagerly to keep the full team visible while scrolling.
-      loading="eager"
+      loading={loading}
       sizes="144px"
       onError={() => {
         if (retrySrc && imageSrc === src) {
@@ -74,23 +77,12 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
       {visibleMembers.map((member, index) => {
         const cardId = member.id || `${member.firstName}-${member.lastName}-${index}`;
         const isFlipped = flippedCards.has(cardId);
-        const normalizedFirstName = member.firstName?.trim().toLowerCase();
-        const imageSrc =
-          normalizedFirstName === "deleena"
-            ? "/team/shrek.png"
-            : normalizedFirstName === "melody"
-              ? "/team/melody.jpg"
-              : member.imageUrl
-                ? member.imageUrl
-                : FALLBACK_IMAGE;
+        const imageSrc = member.imageUrl || FALLBACK_IMAGE;
         const retryImageSrc =
           member.imageUrl && member.id
             ? `${process.env.NEXT_PUBLIC_URL}/member-portal-api/profile/image/${encodeURIComponent(member.id)}`
             : undefined;
-        const imageFitClass =
-          normalizedFirstName === "melody"
-            ? "object-contain"
-            : "object-cover object-[center_20%]";
+        const imageFitClass = "object-cover object-[center_20%]";
 
         return (
           <div
@@ -136,6 +128,7 @@ const TeamCardSection: React.FC<TeamCardSectionProps> = ({ members }) => {
                           retrySrc={retryImageSrc}
                           alt={`${member.firstName} ${member.lastName}`}
                           className={`${imageFitClass} group-hover:scale-110 transition-transform duration-500`}
+                          loading={member.position === "Alumni" ? "lazy" : "eager"}
                         />
                       </div>
                     </div>
