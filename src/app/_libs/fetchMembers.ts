@@ -17,7 +17,7 @@ interface ApiResponse {
 }
 export const fetchMembers = async (): Promise<Member[]> => {
   const response = await fetch(
-    `${process.env.NEXT_PUBLIC_URL}/public-members-info`
+    `${process.env.NEXT_PUBLIC_URL}/member-portal-api/public-members-info`
   );
   if (!response.ok) {
     throw new Error("Failed to fetch members");
@@ -40,10 +40,11 @@ export const fetchMembers = async (): Promise<Member[]> => {
       id: user.id,
       firstName: user.first_name,
       lastName: user.last_name,
-      // Keep the static file server as the primary path for efficient bulk
-      // loading. TeamCardSection retries through the no-cache member-portal
-      // endpoint if an individual static request fails.
-      imageUrl: user.image_url ? `${process.env.NEXT_PUBLIC_URL}${user.image_url}` : undefined,
+      imageUrl: user.image_url
+        ? user.image_url.startsWith("http://") || user.image_url.startsWith("https://")
+          ? user.image_url
+          : `${process.env.NEXT_PUBLIC_URL}${user.image_url}`
+        : undefined,
       position: user.current_position || "Unknown",
       blurb: user.profile_blurb || "No blurb available",
       linkedin: formatSocialUrl(user.linkedin_username, 'https://www.linkedin.com/in/'),
