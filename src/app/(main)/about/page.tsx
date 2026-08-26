@@ -110,8 +110,8 @@ const About: React.FC = () => {
           src="/about/destinations.webp"
           alt="Our Destinations"
                 className="rounded-lg"
-          width={4880}
-          height={1032}
+          width={1632}
+          height={736}
         />
             </div>
           </div>
