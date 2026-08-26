@@ -107,11 +107,11 @@ const About: React.FC = () => {
             </p>
             <div className="mt-8 rounded-xl border border-slate-200 bg-white p-4">
         <Image
-          src="/about/destinations.webp"
+          src="/about/destinations.png"
           alt="Our Destinations"
                 className="rounded-lg"
-          width={1632}
-          height={736}
+          width={1252}
+          height={548}
         />
             </div>
           </div>
